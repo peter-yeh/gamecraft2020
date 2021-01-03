@@ -193,7 +193,7 @@ TextureImporter:
     second: FOOD_62
   - first:
       213: 8359632880654387256
-    second: FOOD_63
+    second: Straw
   - first:
       213: 8948975131133598248
     second: FOOD_64
@@ -1237,7 +1237,7 @@ TextureImporter:
     second: FOOD_410
   - first:
       213: 6066254813533066379
-    second: FOOD_411
+    second: Chocolate Bar
   - first:
       213: -8082365986904828543
     second: FOOD_412
@@ -2850,7 +2850,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FOOD_63
+      name: Straw
       rect:
         serializedVersion: 2
         x: 161
@@ -9969,7 +9969,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FOOD_411
+      name: Chocolate Bar
       rect:
         serializedVersion: 2
         x: 184
