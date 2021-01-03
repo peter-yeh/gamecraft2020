@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
-    public float speed = 10.0f;
+    public float speed = 5f;
     private Rigidbody2D rb;
 
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(0, speed);
+        rb.velocity = new Vector2(0, -speed);
     }
 
 }
