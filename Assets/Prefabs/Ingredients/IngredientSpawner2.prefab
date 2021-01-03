@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5888539984160249449}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -3.7473092}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -49,4 +49,5 @@ MonoBehaviour:
   - {fileID: 4086672324354675827, guid: b26a6c1e88297c849b7b5dbcd84fbb93, type: 3}
   - {fileID: 5717607294421787784, guid: 53d35f55a1166aa4a880bc8b3dfc9068, type: 3}
   - {fileID: 2579879804202773154, guid: 58ed6bad3db7b7943a9c2041faa7c781, type: 3}
-  respawnTime: 0.5
+  respawnTime: 1
+  bomb: {fileID: 0}
