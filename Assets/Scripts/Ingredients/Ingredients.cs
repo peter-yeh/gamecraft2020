@@ -11,9 +11,10 @@ public class Ingredients : MonoBehaviour
         rb = this.GetComponent<Rigidbody2D>();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    // Destroys this object if it's out of view.
+    private void OnBecameInvisible()
     {
-        // destroy the object when it collides with the player or smth
+        Destroy(gameObject);
     }
 
 }

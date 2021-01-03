@@ -6,10 +6,9 @@ public class IngredientsSpawner : MonoBehaviour
 {
 
     // todo populate the food lists
-    [SerializeField] private List<Ingredients> foods;
-    [SerializeField] private Vector2 screenBounds;
+    [SerializeField] private List<GameObject> foods;
     [SerializeField] private float respawnTime = 0.5f;
-    [SerializeField] private GameObject tempFood; // will be deleted and replaced by foods list
+    private Vector2 screenBounds;
 
 
     void Start()
@@ -24,8 +23,10 @@ public class IngredientsSpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(respawnTime);
 
+            int choice = Random.Range(0, 5); // choice a number from 0,1,2,3,4 
             // add in logic to spawn the food depending on their probabilty
-            spawnIngredient(tempFood);
+
+            spawnIngredient(foods[choice]);
             Debug.Log("Spawning ingredient");
         }
     }
