@@ -63,4 +63,13 @@ public class playerMovement : MonoBehaviour
 
         return false;
     }
+
+    // Collision with ingredients and bombs
+    void OnTriggerEnter2D(Collider2D col) {
+        Debug.Log("Collision");
+        Destroy(col.gameObject); // Destroy the ingredient or bomb 
+
+        // Explosion here
+
+    }
 }
