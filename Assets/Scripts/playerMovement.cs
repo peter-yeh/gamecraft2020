@@ -14,6 +14,9 @@ public class playerMovement : MonoBehaviour
     public Transform feet;
     public LayerMask groundLayers;
 
+    public GameObject bombExplosion; // Collision with bomb
+    public GameObject foodExplosion; // Collision with ingredient
+
     float mx;
 
     private void Update() {
@@ -69,7 +72,11 @@ public class playerMovement : MonoBehaviour
         Debug.Log("Collision");
         Destroy(col.gameObject); // Destroy the ingredient or bomb 
 
-        // Explosion here
-
+        // Explosion effect
+        if (col.tag == "Bomb") {
+            Instantiate(bombExplosion, transform.position, transform.rotation);
+        } else {
+            Instantiate(foodExplosion, transform.position, transform.rotation);
+        }
     }
 }

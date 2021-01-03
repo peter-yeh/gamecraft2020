@@ -163,6 +163,10 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 256
+  bombExplosion: {fileID: 6675138436539071571, guid: 1374c779310ff3c4cb9a8739feb72c64,
+    type: 3}
+  foodExplosion: {fileID: 7786928754063064880, guid: c69bfc72f3af79347bc41b42fdbe2a48,
+    type: 3}
 --- !u!50 &292847464
 Rigidbody2D:
   serializedVersion: 4
@@ -551,7 +555,7 @@ Transform:
   - {fileID: 890421696}
   - {fileID: 930494915}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &890421691
 GameObject:
@@ -1538,7 +1542,7 @@ PrefabInstance:
     - target: {fileID: 1198607642318914055, guid: 90f417542af07ba4ab3e1109c0cafd67,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1198607642318914055, guid: 90f417542af07ba4ab3e1109c0cafd67,
         type: 3}
