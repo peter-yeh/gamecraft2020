@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Food : MonoBehaviour
+public class Ingredients : MonoBehaviour
 {
-    public float speed = 5f;
     private Rigidbody2D rb;
 
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(0, -speed);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // destroy the object when it collides with the player or smth
     }
 
 }
