@@ -8,36 +8,47 @@ public class IngredientsSpawner : MonoBehaviour
     // todo populate the food lists
     [SerializeField] private List<GameObject> foods;
     [SerializeField] private float respawnTime = 0.5f;
+    [SerializeField] private GameObject bomb;
     private Vector2 screenBounds;
 
 
     void Start()
     {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
-        StartCoroutine(ingredientWave());
+        StartCoroutine(IngredientWave());
     }
 
-    private IEnumerator ingredientWave()
+
+    private IEnumerator IngredientWave()
     {
         while (true)
         {
             yield return new WaitForSeconds(respawnTime);
 
-            int choice = Random.Range(0, 5); // choice a number from 0,1,2,3,4 
+            int choice = Random.Range(0, 6); // choice a number from 0,1,2,3,4,5 
             // add in logic to spawn the food depending on their probabilty
 
-            spawnIngredient(foods[choice]);
-            Debug.Log("Spawning ingredient");
+            if (choice == 5)
+            {
+                DropFromSky(bomb);
+                Debug.Log("Spawning bomb");
+
+            }
+            else
+            {
+                DropFromSky(foods[choice]);
+                Debug.Log("Spawning ingredient");
+            }
         }
     }
 
-    private void spawnIngredient(GameObject go)
+    private void DropFromSky(GameObject go)
     {
         GameObject f = Instantiate(go) as GameObject;
-        f.transform.position = new Vector2(randX(), screenBounds.y);
+        f.transform.position = new Vector2(RandX(), screenBounds.y);
     }
 
-    private float randX()
+    private float RandX()
     {
         return Random.Range(-screenBounds.y, screenBounds.y);
     }

@@ -388,7 +388,7 @@ TextureImporter:
     second: FOOD_127
   - first:
       213: 1477909684785987929
-    second: FOOD_128
+    second: Bomb_sprite
   - first:
       213: 8337743548780583700
     second: FOOD_129
@@ -3606,7 +3606,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FOOD_128
+      name: Bomb_sprite
       rect:
         serializedVersion: 2
         x: 366
