@@ -1,15 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelSelect : MonoBehaviour
 {
     [SerializeField] private GameObject level1;
     [SerializeField] private GameObject level2;
     [SerializeField] private GameObject level3;
+    private int sceneID;
 
     public void SelectLevel(int levelID)
     {
+        sceneID = levelID + 2;
+
         switch (levelID)
         {
             case 1:
@@ -29,6 +33,11 @@ public class LevelSelect : MonoBehaviour
         level1.SetActive(false);
         level2.SetActive(false);
         level3.SetActive(false);
+    }
+
+    public void PlayLevel()
+    {
+        SceneManager.LoadScene(sceneID);
     }
 
 }
