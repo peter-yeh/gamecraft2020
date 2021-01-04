@@ -25,10 +25,10 @@ TextureImporter:
     second: Terrain (16x16)_6
   - first:
       213: 3020870990670601969
-    second: Terrain (16x16)_7
+    second: Orange Floor
   - first:
       213: 1685935324672158413
-    second: Terrain (16x16)_8
+    second: Square Rock
   - first:
       213: 8022139226935704013
     second: Terrain (16x16)_9
@@ -37,7 +37,7 @@ TextureImporter:
     second: Terrain (16x16)_10
   - first:
       213: 4987498479824627636
-    second: Terrain (16x16)_11
+    second: Pink Floor
   - first:
       213: 6480251376165907240
     second: Terrain (16x16)_12
@@ -288,13 +288,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16)_7
+      name: Orange Floor
       rect:
         serializedVersion: 2
         x: 96
         y: 64
-        width: 80
-        height: 48
+        width: 47
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -309,13 +309,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16)_8
+      name: Square Rock
       rect:
         serializedVersion: 2
-        x: 192
+        x: 208
         y: 64
-        width: 64
-        height: 48
+        width: 32
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -372,12 +372,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Terrain (16x16)_11
+      name: Pink Floor
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 80
+        width: 48
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

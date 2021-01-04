@@ -5,9 +5,9 @@ using UnityEngine;
 public class ConveyorBelt : MonoBehaviour
 { 
     //This bool acts as a switch
-    public bool playerInCollider;
+    private bool playerInCollider;
     //This is where we will store the player object.
-    public GameObject playerObj;
+    private GameObject playerObj;
     //you can adjust the speed using the float speed. If you want the belt to push right left use a negative number.
     public float speed;
 
