@@ -10,7 +10,6 @@ public class LevelSelect : MonoBehaviour
 
     public void SelectLevel(int levelID)
     {
-
         switch (levelID)
         {
             case 1:
