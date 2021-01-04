@@ -381,7 +381,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 4420536265206974577, guid: 8ecf47ce89a4b874f8f0666a58837521,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1028,8 +1028,9 @@ GameObject:
   - component: {fileID: 890421693}
   - component: {fileID: 890421692}
   - component: {fileID: 890421697}
+  - component: {fileID: 890421698}
   m_Layer: 8
-  m_Name: Test Platform (2)
+  m_Name: UpDown Platform
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1221,6 +1222,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5cec36b28512c74c9d8f5f80fdb0f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &890421698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890421691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41f1cf3f27bc49f44879f2a5dce2aa60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upLimit: 4
+  downLimit: -5.5
+  speed: 2
 --- !u!1 &930494914
 GameObject:
   m_ObjectHideFlags: 0
@@ -1632,8 +1648,9 @@ GameObject:
   - component: {fileID: 1220516548}
   - component: {fileID: 1220516547}
   - component: {fileID: 1220516552}
+  - component: {fileID: 1220516553}
   m_Layer: 8
-  m_Name: Test Platform (1)
+  m_Name: ConveyorBelt
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1825,6 +1842,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5cec36b28512c74c9d8f5f80fdb0f19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1220516553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220516546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83f4f37dab4478f4387c91c9a4382e70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInCollider: 0
+  playerObj: {fileID: 0}
+  speed: 3
+  durationBeforeFlip: 10
 --- !u!1 &1582924339
 GameObject:
   m_ObjectHideFlags: 0

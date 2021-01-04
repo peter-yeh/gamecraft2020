@@ -6,7 +6,7 @@ public class ItemCollision : MonoBehaviour
 {
     // Collision with ingredients and bombs
     void OnTriggerEnter2D(Collider2D col) {
-        Debug.Log("Collision");
-        Destroy(col.gameObject); // Destroy the ingredient or bomb 
+            Debug.Log("Collision");
+            Destroy(col.gameObject); // Destroy the ingredient or bomb 
     }
 }
