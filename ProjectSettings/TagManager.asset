@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Bomb
+  - Moving Platform
   layers:
   - Default
   - TransparentFX
