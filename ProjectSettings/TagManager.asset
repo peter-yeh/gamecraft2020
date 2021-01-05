@@ -12,6 +12,7 @@ TagManager:
   - Food3
   - Food4
   - Food5
+  - IceFloor
   layers:
   - Default
   - TransparentFX
