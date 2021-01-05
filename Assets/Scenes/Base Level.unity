@@ -1854,8 +1854,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83f4f37dab4478f4387c91c9a4382e70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInCollider: 0
-  playerObj: {fileID: 0}
   speed: 3
   durationBeforeFlip: 10
 --- !u!1 &1296674986
