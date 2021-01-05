@@ -18,12 +18,13 @@ public class IngredientsSpawner : MonoBehaviour
         StartCoroutine(IngredientWave());
     }
 
-
     private IEnumerator IngredientWave()
     {
+        WaitForSeconds wait = new WaitForSeconds(respawnTime);
+
         while (true)
         {
-            yield return new WaitForSeconds(respawnTime);
+            yield return wait;
 
             int choice = Random.Range(0, 6); // a number from 0,1,2,3,4,5 
             // add in logic to spawn the food depending on their probabilty
