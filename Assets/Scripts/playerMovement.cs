@@ -19,6 +19,8 @@ public class playerMovement : MonoBehaviour
 
     float mx;
 
+    [SerializeField] private PlayerHealth playerHealth;
+
     private void Update()
     {
         mx = Input.GetAxisRaw("Horizontal");
@@ -101,6 +103,7 @@ public class playerMovement : MonoBehaviour
                     // Game over
                     Debug.Log("Health less than or equals to 0");
                 }
+                playerHealth.decreaseHealth();
                 Debug.Log("Collision with bomb \n Health left: " + health);
 
                 break;

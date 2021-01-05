@@ -6,15 +6,18 @@ public class PlayerDeath : MonoBehaviour
 {
     public Transform RespawnPoint;
     public GameObject player; 
-    public float minHeight; 
+    public float minHeight;
     //private float time = 3f;
+
+    [SerializeField] private PlayerHealth playerHealth;
 
     void Update() {
         if (player.transform.position.y < minHeight) //player dies
         {
             player.transform.position = RespawnPoint.position;
-            //StartCoroutine(RespawnAfterDelay()); // help how do i delay it falling 
-        }  
+            //StartCoroutine(RespawnAfterDelay()); // help how do i delay it falling
+            playerHealth.decreaseHealth();
+        }
     }
 /*
     public IEnumerator RespawnAfterDelay() {

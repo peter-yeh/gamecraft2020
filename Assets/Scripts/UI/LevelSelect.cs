@@ -8,6 +8,7 @@ public class LevelSelect : MonoBehaviour
     [SerializeField] private GameObject level1;
     [SerializeField] private GameObject level2;
     [SerializeField] private GameObject level3;
+
     private int sceneID;
 
     public void SelectLevel(int levelID)
