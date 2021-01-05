@@ -25,19 +25,19 @@ public class IngredientsSpawner : MonoBehaviour
         {
             yield return new WaitForSeconds(respawnTime);
 
-            int choice = Random.Range(0, 6); // choice a number from 0,1,2,3,4,5 
+            int choice = Random.Range(0, 6); // a number from 0,1,2,3,4,5 
             // add in logic to spawn the food depending on their probabilty
 
             if (choice == 5)
             {
                 DropFromSky(bomb);
-                Debug.Log("Spawning bomb");
+                //Debug.Log("Spawning bomb");
 
             }
             else
             {
                 DropFromSky(foods[choice]);
-                Debug.Log("Spawning ingredient");
+                //Debug.Log("Spawning ingredient");
             }
         }
     }
