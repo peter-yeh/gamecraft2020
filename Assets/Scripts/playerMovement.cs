@@ -17,6 +17,8 @@ public class playerMovement : MonoBehaviour
     public GameObject bombExplosion; // Collision with bomb
     public GameObject foodExplosion; // Collision with ingredient
 
+    public GameObject audioManager;
+
     float mx;
 
     [SerializeField] private PlayerHealth playerHealth;
@@ -65,6 +67,7 @@ public class playerMovement : MonoBehaviour
 
     void Jump()
     {
+        audioManager.GetComponent<SoundEffects>().PlaySound("Jump");
         Vector2 movement = new Vector2(rb.velocity.x, jumpForce);
 
         rb.velocity = movement;
@@ -96,6 +99,7 @@ public class playerMovement : MonoBehaviour
         switch (col.tag)
         {
             case "Bomb":
+                audioManager.GetComponent<SoundEffects>().PlaySound("Explosion");
                 health--;
                 Instantiate(bombExplosion, transform.position, transform.rotation);
                 if (health <= 0)
@@ -109,30 +113,35 @@ public class playerMovement : MonoBehaviour
                 break;
 
             case "Food1": // Orange, Rice, Bun
+                audioManager.GetComponent<SoundEffects>().PlaySound("Ingredient");
                 ingredientBasket[0]++;
                 Instantiate(foodExplosion, transform.position, transform.rotation);
                 Debug.Log("Collected food1, it is now: " + ingredientBasket[0]);
                 break;
 
             case "Food2": // Chocolate, Seaweed, Lettuce
+                audioManager.GetComponent<SoundEffects>().PlaySound("Ingredient");
                 ingredientBasket[1]++;
                 Instantiate(foodExplosion, transform.position, transform.rotation);
                 Debug.Log("Collected food2, it is now: " + ingredientBasket[1]);
                 break;
 
             case "Food3": // Milk, Cucumber, Meat
+                audioManager.GetComponent<SoundEffects>().PlaySound("Ingredient");
                 ingredientBasket[2]++;
                 Instantiate(foodExplosion, transform.position, transform.rotation);
                 Debug.Log("Collected food3, it is now: " + ingredientBasket[2]);
                 break;
 
             case "Food4": // Ice, Salmon, Ketchup
+                audioManager.GetComponent<SoundEffects>().PlaySound("Ingredient");
                 ingredientBasket[3]++;
                 Instantiate(foodExplosion, transform.position, transform.rotation);
                 Debug.Log("Collected food4, it is now: " + ingredientBasket[3]);
                 break;
 
             case "Food5": // Strawberry, Avocado, Cheese
+                audioManager.GetComponent<SoundEffects>().PlaySound("Ingredient");
                 ingredientBasket[4]++;
                 Instantiate(foodExplosion, transform.position, transform.rotation);
                 Debug.Log("Collected food5, it is now: " + ingredientBasket[4]);
