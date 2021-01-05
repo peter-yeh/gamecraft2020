@@ -117,7 +117,7 @@ public class playerMovement : MonoBehaviour
                 Debug.Log("Collected food2, it is now: " + ingredientBasket[1]);
                 break;
 
-            case "Food 3": // Milk, Cucumber, Meat
+            case "Food3": // Milk, Cucumber, Meat
                 ingredientBasket[2]++;
                 Instantiate(foodExplosion, transform.position, transform.rotation);
                 Debug.Log("Collected food3, it is now: " + ingredientBasket[2]);

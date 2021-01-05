@@ -12,48 +12,14 @@ public class ItemCollision : MonoBehaviour
     {
         GameObject go = col.gameObject;
 
-        //Debug.Log("Collision"); / too spammy lol
-        //if (go.CompareTag("Food1") ||
-        //    go.CompareTag("Food2") ||
-        //    go.CompareTag("Food3") ||
-        //    go.CompareTag("Food4") ||
-        //    go.CompareTag("Food5"))
+        //if (go.GetComponent<Ingredients>() != null)
         //{
         //    StartCoroutine(FlashWhite(go));
-        //    Destroy(go);
 
         //}
-        //else
-        //{
-        //    Destroy(go);
-        //}
-        if (go.GetComponent<Ingredients>() != null)
-        {
-            //StartCoroutine(FlashWhite(go));
-
-            sprite = go.GetComponent<SpriteRenderer>();
-            defaultColor = sprite.color;
-
-            sprite.color = Color.red;
-            Invoke("ResetColor", 0.1f);
-
-        }
-        Destroy(go);
+        //Destroy(go);
 
 
-
-
-
-    }
-
-    private void FlashRed()
-    {
-    }
-
-
-    private void ResetColor()
-    {
-        sprite.color = defaultColor;
     }
 
     //private IEnumerator FlashWhite(GameObject go)
@@ -73,6 +39,5 @@ public class ItemCollision : MonoBehaviour
 
     //    }
     //    Destroy(go);
-
     //}
 }
