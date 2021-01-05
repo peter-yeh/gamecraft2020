@@ -36,4 +36,33 @@ public class Ingredients : MonoBehaviour
         }
     }
 
+    //public void OnTriggerEnter2D(Collider2D col)
+    //{
+    //    if (!col.gameObject.CompareTag("Player"))
+    //    {
+    //        StartCoroutine(FlashWhite());
+    //    }
+    //}
+
+    //private IEnumerator FlashWhite()
+    //{
+    //    WaitForSeconds wait = new WaitForSeconds(0.5f);
+    //    SpriteRenderer sprite = transform.GetComponent<SpriteRenderer>();
+    //    Debug.Log("Running FlashWhite");
+
+    //    // set to flash twice
+    //    for (int i = 0; i < 2; i++)
+    //    {
+    //        yield return wait;
+    //        sprite.color = Color.white;
+
+    //        yield return wait;
+    //        sprite.color = Color.clear;
+
+    //    }
+
+    //    //Destroy(transform);
+    //}
+
+
 }

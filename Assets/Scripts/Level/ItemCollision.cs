@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ItemCollision : MonoBehaviour
 {
+    private SpriteRenderer sprite;
+    private Color defaultColor;
+
     // Collision with ingredients and bombs
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -24,27 +27,52 @@ public class ItemCollision : MonoBehaviour
         //{
         //    Destroy(go);
         //}
+        if (go.GetComponent<Ingredients>() != null)
+        {
+            //StartCoroutine(FlashWhite(go));
 
+            sprite = go.GetComponent<SpriteRenderer>();
+            defaultColor = sprite.color;
+
+            sprite.color = Color.red;
+            Invoke("ResetColor", 0.1f);
+
+        }
         Destroy(go);
 
 
+
+
+
     }
 
-    private IEnumerator FlashWhite(GameObject go)
+    private void FlashRed()
     {
-        WaitForSeconds wait = new WaitForSeconds(0.5f);
-        SpriteRenderer sprite = go.GetComponent<SpriteRenderer>();
-        Debug.Log("Running FlashWhite");
-
-        // set to flash twice
-        for (int i = 0; i < 2; i++)
-        {
-            yield return wait;
-            sprite.color = Color.white;
-
-            yield return wait;
-            sprite.color = Color.clear;
-
-        }
     }
+
+
+    private void ResetColor()
+    {
+        sprite.color = defaultColor;
+    }
+
+    //private IEnumerator FlashWhite(GameObject go)
+    //{
+    //    WaitForSeconds wait = new WaitForSeconds(0.5f);
+    //    SpriteRenderer sprite = go.GetComponent<SpriteRenderer>();
+    //    Debug.Log("Running FlashWhite");
+
+    //    // set to flash twice
+    //    for (int i = 0; i < 2; i++)
+    //    {
+    //        yield return wait;
+    //        sprite.color = Color.white;
+
+    //        yield return wait;
+    //        sprite.color = Color.clear;
+
+    //    }
+    //    Destroy(go);
+
+    //}
 }
