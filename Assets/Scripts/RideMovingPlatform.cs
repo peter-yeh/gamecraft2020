@@ -15,7 +15,7 @@ public class RideMovingPlatform : MonoBehaviour
             Debug.Log("Moving");
             //isParentPlatform = true;
             //parentPlatform = col.transform;
-            this.transform.parent = col.transform;
+            this.transform.parent = col.transform.parent;
         }
     }
 

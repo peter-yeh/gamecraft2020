@@ -12,7 +12,7 @@ TagManager:
   - Food3
   - Food4
   - Food5
-  - IceFloor
+  - Borders
   layers:
   - Default
   - TransparentFX
@@ -23,7 +23,7 @@ TagManager:
   - 
   - 
   - Ground
-  - Background Image
+  - 
   - 
   - 
   - 
