@@ -50,4 +50,4 @@ MonoBehaviour:
   - {fileID: 140103793844162625, guid: 3ceb8faa0e8b08149a945a18835679de, type: 3}
   - {fileID: 798149419437234649, guid: d7b91ef29376db448a7d42d305c36049, type: 3}
   respawnTime: 1
-  bomb: {fileID: 0}
+  bomb: {fileID: 7696686579821390784, guid: bd7f0faca37022f4b87c993329ee87c3, type: 3}
