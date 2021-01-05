@@ -12,10 +12,12 @@ public class ConveyorBelt : MonoBehaviour
     public float speed;
 
     // 1 means right direction, -1 means left direction
-    private float isRight = 1;
+    public float isRight;
     private float flipDirectionTime = 0.0f;
     public float durationBeforeFlip;
 
+    public GameObject greenBelt;
+    public GameObject redBelt;
 
     // Update is called once per frame
     void Update()
@@ -24,6 +26,7 @@ public class ConveyorBelt : MonoBehaviour
         {
             flipDirectionTime += durationBeforeFlip;
             isRight *= -1;
+            switchBelts();
 
         }
             //We are building this script so that future iterations can handle multiple objects on the belt
@@ -34,6 +37,19 @@ public class ConveyorBelt : MonoBehaviour
                 playerObj.transform.position += transform.right * isRight * (speed * Time.deltaTime);
             }
         }
+
+    private void switchBelts()
+    {
+        if (isRight == 1)
+        {
+            greenBelt.SetActive(true);
+            redBelt.SetActive(false);
+        } else
+        {
+            greenBelt.SetActive(false);
+            redBelt.SetActive(true);
+        }
+    }
         void OnCollisionEnter2D(Collision2D col)
         {
             //Enter is good for a player detetion because we just need when the player first enters the collider.

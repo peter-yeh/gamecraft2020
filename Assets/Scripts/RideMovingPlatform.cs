@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class RideMovingPlatform : MonoBehaviour
 {
-    //Transform parentPlatform;
+    private bool isParentPlatform = false;
+    private Transform parentPlatform;
 
     // Player can move along with moving platforms
     void OnCollisionEnter2D(Collision2D col)
@@ -12,8 +13,9 @@ public class RideMovingPlatform : MonoBehaviour
         if (col.gameObject.tag.Equals("Moving Platform"))
         {
             Debug.Log("Moving");
-            //parentPlatform = col.transform;
-            this.transform.parent = col.transform.parent;
+            isParentPlatform = true;
+            parentPlatform = col.transform;
+            //this.transform.parent = col.transform.parent;
         }
     }
 
@@ -23,16 +25,21 @@ public class RideMovingPlatform : MonoBehaviour
         if (col.gameObject.tag.Equals("Moving Platform"))
         {
             Debug.Log("Moving");
-            //parentPlatform = null;
-            this.transform.parent = null;
+            isParentPlatform = false;
+            parentPlatform = null;
+            //this.transform.parent = null;
         }
     }
 
-    //private void LateUpdate()
-    //{
-    //    if (parentPlatform != null)
-    //    {
-    //        transform.position = new Vector2(transform.position.x + parentPlatform.position.x, transform.position.y);
-    //    }
-    //}
+    private void LateUpdate()
+    {
+        if (isParentPlatform)
+        {
+            this.transform.parent = parentPlatform.parent;
+        }
+        else
+        {
+            this.transform.parent = null;
+        }
+    }
 }
