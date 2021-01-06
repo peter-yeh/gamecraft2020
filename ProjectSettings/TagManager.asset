@@ -15,6 +15,7 @@ TagManager:
   - Borders
   - IceFloor
   - Fire
+  - IceFloor
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - PauseMenu
   - 
   - 
   - 
@@ -51,4 +52,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: PauseMenu
+    uniqueID: 524880047
     locked: 0

@@ -19,7 +19,7 @@ public class CountdownTimer : MonoBehaviour
     {
         currentTime -= 1 * Time.deltaTime;
 
-        if (currentTime == 60f)
+        if (currentTime.ToString("0").Equals("60"))
         {
             countdownText.text = "01:00";
             return;
