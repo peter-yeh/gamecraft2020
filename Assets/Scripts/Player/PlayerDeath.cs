@@ -17,10 +17,10 @@ public class PlayerDeath : MonoBehaviour
     void Update() {
         if (player.transform.position.y < minHeight && !isDead) // Player falls off screen 
         {
-            audioManager.GetComponent<SoundEffects>().PlaySound("GameOver");
             isDead = true;
             StartCoroutine(RespawnAfterDelay()); 
             playerHealth.decreaseHealth();
+            audioManager.GetComponent<SoundEffects>().PlaySound("GameOver");
         }
     }
 

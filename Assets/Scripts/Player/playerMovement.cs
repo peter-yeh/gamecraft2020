@@ -159,7 +159,6 @@ public class playerMovement : MonoBehaviour
                 if (health <= 0)
                 {
                     // Game over
-                    audioManager.GetComponent<SoundEffects>().PlaySound("GameOver");
                     Debug.Log("Health less than or equals to 0");
                 }
                 playerHealth.decreaseHealth();
