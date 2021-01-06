@@ -63,12 +63,18 @@ public class IcyPlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Vector2 movement = new Vector2(mx * movementSpeed, rb.velocity.y);
+        bool grounded = IsGrounded();
 
-        //rb.velocity = movement;
+        if (grounded)
+        {
+            Vector2 Movement = new Vector2(mx, 0);
+            rb.AddForce(Movement * movementSpeed);
+        } else
+        {
+            Vector2 movement = new Vector2(mx * movementSpeed, rb.velocity.y);
 
-        Vector2 Movement = new Vector2(mx, 0);
-        rb.AddForce(Movement * movementSpeed);
+            rb.velocity = movement;
+        }
     }
 
     void Jump()
