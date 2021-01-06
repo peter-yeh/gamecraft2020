@@ -1703,6 +1703,12 @@ PrefabInstance:
       propertyPath: m_SleepingMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5923748294236488131, guid: 5778e936520f9ec4da9ae5ce1efbd80f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8637756934439999645, guid: 8ecf47ce89a4b874f8f0666a58837521,
+        type: 3}
     - target: {fileID: 5923748294236488132, guid: 5778e936520f9ec4da9ae5ce1efbd80f,
         type: 3}
       propertyPath: m_RootOrder
@@ -2657,7 +2663,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.3333334, y: 1.3333334}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
