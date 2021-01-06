@@ -159,8 +159,10 @@ MonoBehaviour:
     m_Bits: 256
   bombExplosion: {fileID: 6675138436539071571, guid: 1374c779310ff3c4cb9a8739feb72c64,
     type: 3}
-  foodExplosion: {fileID: 7786928754063064880, guid: c69bfc72f3af79347bc41b42fdbe2a48,
-    type: 3}
+  audioManager: {fileID: 0}
+  playerHealth: {fileID: 0}
+  health: 3
+  knockbackAmount: 0
 --- !u!95 &5923748294236488143
 Animator:
   serializedVersion: 3
@@ -207,6 +209,8 @@ MonoBehaviour:
   RespawnPoint: {fileID: 0}
   player: {fileID: 5923748294236488140}
   minHeight: -8
+  audioManager: {fileID: 0}
+  playerHealth: {fileID: 0}
 --- !u!1 &8696385318358285847
 GameObject:
   m_ObjectHideFlags: 0
