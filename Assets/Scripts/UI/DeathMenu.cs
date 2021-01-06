@@ -7,6 +7,6 @@ public class DeathMenu : MonoBehaviour
 {
     public void ReturnToMap()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 }
