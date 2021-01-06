@@ -24,6 +24,8 @@ public class playerMovement : MonoBehaviour
     [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] private int health = 3;
 
+    public float knockbackAmount;
+
     private void Update()
     {
         mx = Input.GetAxisRaw("Horizontal");
@@ -90,15 +92,14 @@ public class playerMovement : MonoBehaviour
 
     private int[] ingredientBasket = new int[5];
 
-    // Collision with ingredients and bombs
+    // Collision with ingredients and bombs and fire trap
     void OnTriggerEnter2D(Collider2D col)
     {
-        Destroy(col.gameObject); // Destroy the ingredient or bomb 
-
         // Explosion effect
         switch (col.tag)
         {
             case "Bomb":
+                Destroy(col.gameObject); // Destroy the bomb 
                 audioManager.GetComponent<SoundEffects>().PlaySound("Explosion");
                 health--;
                 GameObject explosion = Instantiate(bombExplosion, transform.position, transform.rotation);
@@ -118,7 +119,28 @@ public class playerMovement : MonoBehaviour
                     "\nUnlocks: " + LevelUnlocked.Unlock(ingredientBasket, 1).ToString());
                 break;
 
+            case "Fire":
+                //audioManager.GetComponent<SoundEffects>().PlaySound("Explosion");
+                health--;
+                //Vector2 direction = (this.transform.position - col.transform.position).normalized;
+                //transform.position = Vector2.MoveTowards(transform.position, col.transform.position, -knockbackAmount * Time.deltaTime);
+                //rb.AddForce(direction * knockbackAmount, ForceMode2D.Force);
+                //this.transform.Translate(direction * knockbackAmount);
+                //GameObject explosion = Instantiate(bombExplosion, transform.position, transform.rotation);
+                //Destroy(explosion, 2f); // 2s delay before destroying clone
+                if (health <= 0)
+                {
+                    // Game over
+                    audioManager.GetComponent<SoundEffects>().PlaySound("GameOver");
+                    Debug.Log("Health less than or equals to 0");
+                }
+                playerHealth.decreaseHealth();
+                Debug.Log("Touched Fire \n Health left: " + health);
+
+                break;
+
             case "Food1": // Orange, Rice, Bun
+                Destroy(col.gameObject); // Destroy the ingredient
                 audioManager.GetComponent<SoundEffects>().PlaySound("Ingredient");
                 ingredientBasket[0]++;
                 //Instantiate(foodExplosion, transform.position, transform.rotation);
@@ -126,6 +148,7 @@ public class playerMovement : MonoBehaviour
                 break;
 
             case "Food2": // Chocolate, Seaweed, Lettuce
+                Destroy(col.gameObject); // Destroy the ingredient
                 audioManager.GetComponent<SoundEffects>().PlaySound("Ingredient");
                 ingredientBasket[1]++;
                 //Instantiate(foodExplosion, transform.position, transform.rotation);
@@ -133,6 +156,7 @@ public class playerMovement : MonoBehaviour
                 break;
 
             case "Food3": // Milk, Cucumber, Meat
+                Destroy(col.gameObject); // Destroy the ingredient
                 audioManager.GetComponent<SoundEffects>().PlaySound("Ingredient");
                 ingredientBasket[2]++;
                 //Instantiate(foodExplosion, transform.position, transform.rotation);
@@ -140,6 +164,7 @@ public class playerMovement : MonoBehaviour
                 break;
 
             case "Food4": // Ice, Salmon, Ketchup
+                Destroy(col.gameObject); // Destroy the ingredient
                 audioManager.GetComponent<SoundEffects>().PlaySound("Ingredient");
                 ingredientBasket[3]++;
                 //Instantiate(foodExplosion, transform.position, transform.rotation);
@@ -147,6 +172,7 @@ public class playerMovement : MonoBehaviour
                 break;
 
             case "Food5": // Strawberry, Avocado, Cheese
+                Destroy(col.gameObject); // Destroy the ingredient
                 audioManager.GetComponent<SoundEffects>().PlaySound("Ingredient");
                 ingredientBasket[4]++;
                 //Instantiate(foodExplosion, transform.position, transform.rotation);
@@ -154,6 +180,7 @@ public class playerMovement : MonoBehaviour
                 break;
 
             default:
+                Destroy(col.gameObject);
                 Debug.LogError("Collided with something not bomb or food");
                 break;
         }
