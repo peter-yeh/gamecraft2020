@@ -10,43 +10,28 @@ public class SoundEffects : MonoBehaviour
 
     [SerializeField] 
     public new GameObject[] audioSources;
-/*
-    void Start() {
-        Ingredient = Resources.Load<AudioClip> ("Ingredient"); 
-        Explosion = Resources.Load<AudioClip> ("Explosion"); 
-        Jump = Resources.Load<AudioClip> ("Jump"); 
-        GameOver = Resources.Load<AudioClip> ("GameOver"); 
-        Successful = Resources.Load<AudioClip> ("Successful"); 
-
-        AudioSrc = GetComponent<AudioSource> ();
-    }
-
-    void Update() {
-
-    }*/
 
     public void PlaySound (string clip) {
         switch(clip) {
-            case "Explosion":
-                //AudioSrc.PlayOneShot(Explosion);
+            case "Explosion": // Hit bomb
                 AudioSource explodeSound = audioSources[0].GetComponent<AudioSource>();
                 explodeSound.Play();
                 break;
-            case "Ingredient":
-                //AudioSrc.PlayOneShot(Ingredient);
+            case "Ingredient": // Collect ingredient
                 AudioSource ingredientSound = audioSources[1].GetComponent<AudioSource>();
                 ingredientSound.Play();
                 break;
             case "Jump":
-                //AudioSrc.PlayOneShot(Jump);
                 AudioSource jumpSound = audioSources[2].GetComponent<AudioSource>();
                 jumpSound.Play();
                 break;
-            case "GameOver":
-                AudioSrc.PlayOneShot(GameOver);
+            case "GameOver": // Player fell off screen or run out of health
+                AudioSource gameOverSound = audioSources[3].GetComponent<AudioSource>();
+                gameOverSound.Play();
                 break;
-            case "Successful":
-                AudioSrc.PlayOneShot(Successful);
+            case "Successful": // Level passed
+                AudioSource successSound = audioSources[4].GetComponent<AudioSource>();
+                successSound.Play();
                 break;
         }
     }
