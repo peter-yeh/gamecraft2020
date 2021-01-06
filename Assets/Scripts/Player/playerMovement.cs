@@ -179,6 +179,10 @@ public class playerMovement : MonoBehaviour
                 //Debug.Log("Collected food5, it is now: " + ingredientBasket[4]);
                 break;
 
+            case "Portal":
+                Debug.Log("Teleporting");
+                break;
+
             default:
                 Destroy(col.gameObject);
                 Debug.LogError("Collided with something not bomb or food");

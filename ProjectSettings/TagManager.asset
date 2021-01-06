@@ -13,9 +13,9 @@ TagManager:
   - Food4
   - Food5
   - Borders
-  - IceFloor
   - Fire
   - IceFloor
+  - Portal
   layers:
   - Default
   - TransparentFX
