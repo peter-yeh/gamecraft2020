@@ -5,38 +5,39 @@ using TMPro;
 
 public class CountdownTimer : MonoBehaviour
 {
-    private float currentTime;
-    private float startingTime = 60f;
+    [Range(0, 60)]
+    [SerializeField] private int timeLeft = 60;
 
     [SerializeField] TextMeshProUGUI countdownText;
 
     private void Start()
     {
-        currentTime = startingTime;
+        StartCoroutine(CountDown());
     }
 
-    private void Update()
+    private IEnumerator CountDown()
     {
-        currentTime -= 1 * Time.deltaTime;
+        while (timeLeft >= 0)
+        {
+            yield return new WaitForSeconds(1f);
+            timeLeft--;
 
-        if (currentTime.ToString("0").Equals("60"))
-        {
-            countdownText.text = "01:00";
-            return;
+            if (timeLeft == 60)
+            {
+                countdownText.text = "01:00";
+            }
+            else if (timeLeft <= 9)
+            {
+                countdownText.text = "00:0" + timeLeft;
+            }
+            else
+            {
+                countdownText.text = "00:" + timeLeft;
+            }
         }
 
-        if (currentTime <= 0)
-        {
-            currentTime = 0;
-        }
+        GameObject.FindGameObjectWithTag("Player").GetComponent<playerMovement>().TimeUp();
 
-        if (currentTime.ToString("0").Length == 1)
-        {
-            countdownText.text = "00:0" + currentTime.ToString("0");
-        }
-        else
-        {
-            countdownText.text = "00:" + currentTime.ToString("0");
-        }
     }
+
 }

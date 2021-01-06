@@ -33,7 +33,6 @@ public class IngredientsSpawner : MonoBehaviour
             {
                 DropFromSky(bomb);
                 //Debug.Log("Spawning bomb");
-
             }
             else
             {

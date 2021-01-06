@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,7 +20,7 @@ public class playerMovement : MonoBehaviour
 
     public GameObject audioManager;
 
-    float mx;
+    protected float mx;
 
     [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] private int health = 3;
@@ -89,8 +90,40 @@ public class playerMovement : MonoBehaviour
         return false;
     }
 
+    [Space(20)]
+    [Header("Required to be filled up for each level")]
+    [SerializeField] private GameObject[] recipesObject;
+    [SerializeField] private GameObject timeUpMenu;
+    [SerializeField] private GameObject timeUpText;
+    private WaitForSeconds wait = new WaitForSeconds(0.5f);
+    [Space(10)]
 
     private int[] ingredientBasket = new int[5];
+    public void TimeUp()
+    {
+        Time.timeScale = 0f;
+        timeUpMenu.SetActive(true);
+        int level = Storage.GetStorage().GetCurrentLevel();
+        List<int> recipeUnlocked = LevelUnlocked.Unlock(ingredientBasket, level);
+
+        Debug.Log("The ingredient basket is: " + String.Join(", ", ingredientBasket));
+        Debug.Log("The recipe unlocked is: " + String.Join(", ", recipeUnlocked));
+
+        foreach (int i in recipeUnlocked)
+        {
+            recipesObject[i].SetActive(true);
+        }
+
+        if (recipeUnlocked.Count == 0)
+        {
+            // help meeee idk how to use the text pro...
+            //timeUpText.GetComponent<TextMesh>().text += "\n Oh no, no new recipes unlocked";
+        }
+        else
+        {
+            //timeUpText.GetComponent<TextMesh>().text += "Yay! You unlocked " + recipeUnlocked.Count + " new recipes";
+        }
+    }
 
     // Collision with ingredients and bombs and fire trap
     void OnTriggerEnter2D(Collider2D col)
@@ -109,14 +142,9 @@ public class playerMovement : MonoBehaviour
                     // Game over
                     audioManager.GetComponent<SoundEffects>().PlaySound("GameOver");
                     Debug.Log("Health less than or equals to 0");
-
-
                 }
                 playerHealth.decreaseHealth();
                 Debug.Log("Collision with bomb \n Health left: " + health);
-
-                Debug.Log("Ingredient basket contains: " + ingredientBasket.ToString() +
-                    "\nUnlocks: " + LevelUnlocked.Unlock(ingredientBasket, 1).ToString());
                 break;
 
             case "Fire":

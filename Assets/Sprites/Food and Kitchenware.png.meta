@@ -490,7 +490,7 @@ TextureImporter:
     second: FOOD_161
   - first:
       213: -7430538439637680704
-    second: FOOD_162
+    second: HotChoclate_sprite
   - first:
       213: 6836731735799416464
     second: FOOD_163
@@ -670,7 +670,7 @@ TextureImporter:
     second: FOOD_221
   - first:
       213: 4501280975004960869
-    second: FOOD_222
+    second: Hotdog_sprite
   - first:
       213: -5646102037538044414
     second: FOOD_223
@@ -724,7 +724,7 @@ TextureImporter:
     second: FOOD_239
   - first:
       213: -6342194109755522260
-    second: FOOD_240
+    second: OrangeJuice_sprite
   - first:
       213: 1335696634513850077
     second: FOOD_241
@@ -736,7 +736,7 @@ TextureImporter:
     second: FOOD_243
   - first:
       213: 6719327633713712954
-    second: FOOD_244
+    second: StrawberrySmoothie_Sprite
   - first:
       213: 2438347995434075669
     second: FOOD_245
@@ -745,7 +745,7 @@ TextureImporter:
     second: FOOD_246
   - first:
       213: 304400657853117738
-    second: FOOD_247
+    second: Burger_sprite
   - first:
       213: -6751251649229112442
     second: FOOD_248
@@ -793,7 +793,7 @@ TextureImporter:
     second: FOOD_262
   - first:
       213: 2930183218430439754
-    second: FOOD_263
+    second: Sandwich_sprite
   - first:
       213: 8253306451313489157
     second: FOOD_264
@@ -904,7 +904,7 @@ TextureImporter:
     second: FOOD_299
   - first:
       213: 8973717621188968147
-    second: FOOD_300
+    second: SalmonNigiri_sprite
   - first:
       213: -3202136107536500834
     second: Salmon_sprite
@@ -928,7 +928,7 @@ TextureImporter:
     second: FOOD_307
   - first:
       213: -7775745666278549000
-    second: FOOD_308
+    second: CaliforniaRoll_sprite
   - first:
       213: 6718779676121599076
     second: FOOD_309
@@ -1021,7 +1021,7 @@ TextureImporter:
     second: FOOD_338
   - first:
       213: -4737241327836840629
-    second: FOOD_339
+    second: CucumberMaki_sprit
   - first:
       213: -1022932468765483513
     second: FOOD_340
@@ -4320,7 +4320,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FOOD_162
+      name: HotChoclate_sprite
       rect:
         serializedVersion: 2
         x: 573
@@ -5391,7 +5391,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FOOD_222
+      name: Hotdog_sprite
       rect:
         serializedVersion: 2
         x: 53
@@ -5769,7 +5769,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FOOD_240
+      name: OrangeJuice_sprite
       rect:
         serializedVersion: 2
         x: 495
@@ -5853,7 +5853,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FOOD_244
+      name: StrawberrySmoothie_Sprite
       rect:
         serializedVersion: 2
         x: 599
@@ -5916,7 +5916,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FOOD_247
+      name: Burger_sprite
       rect:
         serializedVersion: 2
         x: 79
@@ -6252,7 +6252,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FOOD_263
+      name: Sandwich_sprite
       rect:
         serializedVersion: 2
         x: 131
@@ -7029,7 +7029,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FOOD_300
+      name: SalmonNigiri_sprite
       rect:
         serializedVersion: 2
         x: 79
@@ -7197,7 +7197,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FOOD_308
+      name: CaliforniaRoll_sprite
       rect:
         serializedVersion: 2
         x: 79
@@ -7848,7 +7848,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FOOD_339
+      name: CucumberMaki_sprit
       rect:
         serializedVersion: 2
         x: 53
