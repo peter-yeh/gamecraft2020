@@ -293,7 +293,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fbbed59da9600214da7e2331087e50a0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4c21c68d80ce42e46b0589940cb53449, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1881,6 +1881,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2055608578}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1675272252 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1604293037714852817, guid: 413881fae9867bb4dabd0a36f1b4629a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1256198260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 049ffeb58feb2d746a1df214b1966f7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1687477036
 GameObject:
   m_ObjectHideFlags: 0
@@ -2602,7 +2614,7 @@ MonoBehaviour:
   player: {fileID: 1107328855090498}
   minHeight: -8.5
   audioManager: {fileID: 171960800}
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 1675272252}
 --- !u!114 &1107328855090500
 MonoBehaviour:
   m_ObjectHideFlags: 0
