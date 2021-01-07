@@ -4,10 +4,6 @@ using UnityEngine.UI;
 
 public class LevelUnlocked
 {
-    //[SerializeField] private Button Level2Button;
-    //[SerializeField] private Image Level2Lock;
-    //[SerializeField] private Button Level3Button;
-    //[SerializeField] private Image Level3Lock;
 
     private LevelUnlocked() { }
 
@@ -23,6 +19,8 @@ public class LevelUnlocked
                 return new LevelUnlocked().UnlockLevel2(ingredientsBasket);
             case 3:
                 return new LevelUnlocked().UnlockLevel3(ingredientsBasket);
+            case 4:
+                return new LevelUnlocked().UnlockLevel4(ingredientsBasket);
             default:
                 Debug.LogError("Wrong level given in Scripts/LevelUnlocked");
                 return null;
@@ -202,6 +200,39 @@ public class LevelUnlocked
                 s.SetReceipeUnlocked(8); // unlocked sandwich
                 s.AddBlobCount(9999);
                 l.Add(8);
+            }
+        }
+
+        return l;
+    }
+
+    // Flour, Egg, Chocolate, Milk, Butter
+    private List<int> UnlockLevel4(int[] ingredientsBasket) // cake theme
+    {
+        Storage s = Storage.GetStorage();
+        List<int> l = new List<int>();
+
+        if (!s.getRecipeUnlocked(9)) // if cake is not unlocked
+        {
+            // checks if there's enogh ingredients to unlock cake
+            if (ingredientsBasket[0] >= 1 && // Flour
+             ingredientsBasket[1] >= 1 && // Egg
+             ingredientsBasket[2] >= 1 && // Chocolate
+             ingredientsBasket[3] >= 1 && // Milk
+             ingredientsBasket[4] >= 1) //  Butter
+            {
+                ingredientsBasket[0]--;
+                ingredientsBasket[1]--;
+                ingredientsBasket[2]--;
+                ingredientsBasket[3]--;
+                ingredientsBasket[4]--;
+
+                s.SetReceipeUnlocked(9); // unlocked cake
+                s.AddBlobCount(9999);
+                l.Add(9);
+            }
+            else
+            { // do nothing since not enough ingredients
             }
         }
 

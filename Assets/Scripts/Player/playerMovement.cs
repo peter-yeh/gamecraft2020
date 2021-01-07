@@ -141,6 +141,8 @@ public class playerMovement : MonoBehaviour
 
     }
 
+    [SerializeField] private IngredientCounter counter;
+
     // Collision with ingredients and bombs and fire trap
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -178,42 +180,47 @@ public class playerMovement : MonoBehaviour
 
                 break;
 
-            case "Food1": // Orange, Rice, Bun
+            case "Food1": // Orange, Rice, Bun, Flour
                 Destroy(col.gameObject); // Destroy the ingredient
                 audioManager.GetComponent<SoundEffects>().PlaySound("Ingredient");
                 ingredientBasket[0]++;
+                counter.add(1);
                 //Instantiate(foodExplosion, transform.position, transform.rotation);
-                //Debug.Log("Collected food1, it is now: " + ingredientBasket[0]);
+                Debug.Log("Collected food1, it is now: " + ingredientBasket[0]);
                 break;
 
-            case "Food2": // Chocolate, Seaweed, Lettuce
+            case "Food2": // Chocolate, Seaweed, Lettuce, Egg
                 Destroy(col.gameObject); // Destroy the ingredient
                 audioManager.GetComponent<SoundEffects>().PlaySound("Ingredient");
                 ingredientBasket[1]++;
+                counter.add(2);
                 //Instantiate(foodExplosion, transform.position, transform.rotation);
                 //Debug.Log("Collected food2, it is now: " + ingredientBasket[1]);
                 break;
 
-            case "Food3": // Milk, Cucumber, Meat
+            case "Food3": // Milk, Cucumber, Meat, Chocolate
                 Destroy(col.gameObject); // Destroy the ingredient
                 audioManager.GetComponent<SoundEffects>().PlaySound("Ingredient");
                 ingredientBasket[2]++;
+                counter.add(3);
                 //Instantiate(foodExplosion, transform.position, transform.rotation);
                 //Debug.Log("Collected food3, it is now: " + ingredientBasket[2]);
                 break;
 
-            case "Food4": // Ice, Salmon, Ketchup
+            case "Food4": // Ice, Salmon, Ketchup, Milk
                 Destroy(col.gameObject); // Destroy the ingredient
                 audioManager.GetComponent<SoundEffects>().PlaySound("Ingredient");
                 ingredientBasket[3]++;
+                counter.add(4);
                 //Instantiate(foodExplosion, transform.position, transform.rotation);
                 //Debug.Log("Collected food4, it is now: " + ingredientBasket[3]);
                 break;
 
-            case "Food5": // Strawberry, Avocado, Cheese
+            case "Food5": // Strawberry, Avocado, Cheese, Butter
                 Destroy(col.gameObject); // Destroy the ingredient
                 audioManager.GetComponent<SoundEffects>().PlaySound("Ingredient");
                 ingredientBasket[4]++;
+                counter.add(5);
                 //Instantiate(foodExplosion, transform.position, transform.rotation);
                 //Debug.Log("Collected food5, it is now: " + ingredientBasket[4]);
                 break;
