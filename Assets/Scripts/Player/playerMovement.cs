@@ -90,13 +90,13 @@ public class playerMovement : MonoBehaviour
         return false;
     }
 
-    [Space(20)]
-    [Header("Required to be filled up for each level")]
-    [SerializeField] private GameObject[] recipesObject;
-    [SerializeField] private GameObject timeUpMenu;
-    [SerializeField] private GameObject timeUpText;
-    private WaitForSeconds wait = new WaitForSeconds(0.5f);
-    [Space(10)]
+    //[Space(20)]
+    //[Header("Required to be filled up for each level")]
+    //[SerializeField] private GameObject[] recipesObject;
+    //[SerializeField] private GameObject timeUpMenu;
+    //[SerializeField] private GameObject timeUpText;
+    //private WaitForSeconds wait = new WaitForSeconds(0.5f);
+    //[Space(10)]
 
     private int[] ingredientBasket = new int[5];
     public void TimeUp()
