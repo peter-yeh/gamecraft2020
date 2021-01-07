@@ -11,6 +11,22 @@ public class UnlockLevels : MonoBehaviour
     [SerializeField] private Button level3Button;
     [SerializeField] private Image level3Lock;
 
+
+    public void Start()
+    {
+        // if level 2 unlocked, Unlockleve2()
+        // if level 3 unlocke, UnlockLevel3()
+
+        if (Storage.GetStorage().IsLevelUnlocked(2))
+        {
+            UnlockLevel2();
+        }
+        if (Storage.GetStorage().IsLevelUnlocked(3))
+        {
+            UnlockLevel3();
+        }
+    }
+
     public void UnlockLevel2()
     {
         level2Button.interactable = true;

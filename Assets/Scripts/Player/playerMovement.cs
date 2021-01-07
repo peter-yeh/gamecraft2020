@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class playerMovement : MonoBehaviour
@@ -112,17 +113,29 @@ public class playerMovement : MonoBehaviour
         foreach (int i in recipeUnlocked)
         {
             recipesObject[i].SetActive(true);
+            if (i < 3)
+            {
+                Storage.GetStorage().SetLevelUnlocked(2);
+            }
+            if (i >= 3)
+            {
+                Storage.GetStorage().SetLevelUnlocked(3);
+            }
+
+
         }
 
         if (recipeUnlocked.Count == 0)
         {
             // help meeee idk how to use the text pro...
-            //timeUpText.GetComponent<TextMesh>().text += "\n Oh no, no new recipes unlocked";
+            timeUpText.GetComponent<TextMeshProUGUI>().text += "\n Oh no, no new recipes unlocked";
         }
         else
         {
-            //timeUpText.GetComponent<TextMesh>().text += "Yay! You unlocked " + recipeUnlocked.Count + " new recipes";
+            timeUpText.GetComponent<TextMeshProUGUI>().text += "Yay! You unlocked " + recipeUnlocked.Count + " new recipes";
         }
+
+
     }
 
     // Collision with ingredients and bombs and fire trap

@@ -311,6 +311,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54640052}
   m_CullTransparentMesh: 0
+--- !u!1 &131827862 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3195435770115356313, guid: fda78586daf25b3438c282e08dc402e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 3195435771047824612}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &171960800
 GameObject:
   m_ObjectHideFlags: 0
@@ -3304,7 +3310,7 @@ MonoBehaviour:
   - {fileID: 503187952}
   - {fileID: 1216263249}
   timeUpMenu: {fileID: 385178032}
-  timeUpText: {fileID: 0}
+  timeUpText: {fileID: 131827862}
   icySpeed: 3
 --- !u!4 &1107328855090506
 Transform:
@@ -3456,6 +3462,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1656760979}
     m_Modifications:
+    - target: {fileID: 3195435770115356315, guid: fda78586daf25b3438c282e08dc402e0,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3195435770115356315, guid: fda78586daf25b3438c282e08dc402e0,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3195435770799494484, guid: fda78586daf25b3438c282e08dc402e0,
         type: 3}
       propertyPath: m_Name
@@ -3464,7 +3480,7 @@ PrefabInstance:
     - target: {fileID: 3195435770799494484, guid: fda78586daf25b3438c282e08dc402e0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3195435770799494485, guid: fda78586daf25b3438c282e08dc402e0,
         type: 3}

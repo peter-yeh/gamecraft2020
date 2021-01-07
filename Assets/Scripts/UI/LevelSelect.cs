@@ -14,6 +14,7 @@ public class LevelSelect : MonoBehaviour
     public void SelectLevel(int levelID)
     {
         sceneID = levelID + 2;
+        Storage.GetStorage().SetCurrentLevel(levelID);
 
         switch (levelID)
         {

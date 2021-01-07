@@ -43,7 +43,7 @@ public class Storage
     }
 
     // Recipes unlocked: [Orange Juice(0), Hot Chocolate(1), Strawberry Smoothie(2), Cucumber Maki(3),
-    // Salmon Gunkan(4), California Roll(5), Burger(6), Hotdog(7), Sandwich(8), bonus recipe(9)]
+    // Salmon Nigiri(4), California Roll(5), Burger(6), Hotdog(7), Sandwich(8), bonus recipe(9)]
     public bool getRecipeUnlocked(int key) // key range from 0 to 9 only
     {
         return PlayerPrefs.GetInt("RecipeUnlocked" + key, 0) == 0 ? false : true;
@@ -52,5 +52,15 @@ public class Storage
     public void SetReceipeUnlocked(int key)
     {
         PlayerPrefs.SetInt("RecipeUnlocked" + key, 1);
+    }
+
+    public bool IsLevelUnlocked(int i)
+    {
+        return PlayerPrefs.GetInt("LevelUnlocked" + i, 0) == 0 ? false : true;
+    }
+
+    public void SetLevelUnlocked(int i)
+    {
+        PlayerPrefs.SetInt("LevelUnlocked" + i, 1);
     }
 }

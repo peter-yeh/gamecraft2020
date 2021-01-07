@@ -10636,9 +10636,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ebcf1acc77331545aff857a8c80c4d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level2Button: {fileID: 0}
+  level2Button: {fileID: 273239261}
   level2Lock: {fileID: 1753541061}
-  level3Button: {fileID: 0}
+  level3Button: {fileID: 556695144}
   level3Lock: {fileID: 285829819}
 --- !u!1 &2059198687
 GameObject:
