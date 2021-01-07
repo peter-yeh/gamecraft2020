@@ -801,6 +801,7 @@ MonoBehaviour:
   speed: 3
   isRight: -1
   durationBeforeFlip: 10
+  oneBeltOnly: 0
   greenBelt: {fileID: 1497615819}
   redBelt: {fileID: 1291386254}
 --- !u!114 &149444894
@@ -1165,7 +1166,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 47ecb39f112a92f4fbb8db3207e7c57d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4018232eb2df2ee4599f9585d9ea5e46, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1454,6 +1455,7 @@ MonoBehaviour:
   speed: 3
   isRight: -1
   durationBeforeFlip: 10
+  oneBeltOnly: 0
   greenBelt: {fileID: 134754020}
   redBelt: {fileID: 324642805}
 --- !u!114 &658678886
@@ -1788,6 +1790,7 @@ MonoBehaviour:
   speed: 3
   isRight: 1
   durationBeforeFlip: 10
+  oneBeltOnly: 0
   greenBelt: {fileID: 829789127}
   redBelt: {fileID: 1908416945}
 --- !u!114 &954371492
@@ -1920,6 +1923,7 @@ MonoBehaviour:
   speed: 3
   isRight: 1
   durationBeforeFlip: 10
+  oneBeltOnly: 0
   greenBelt: {fileID: 783994668}
   redBelt: {fileID: 2078645779}
 --- !u!114 &1006522241
