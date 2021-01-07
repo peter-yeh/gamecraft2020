@@ -13,6 +13,7 @@ public class CountdownTimer : MonoBehaviour
     private void Start()
     {
         StartCoroutine(CountDown());
+        countdownText.text = "01:00"; //hardcoded value, for timer to start with timeLeft instead of 00:00
     }
 
     private IEnumerator CountDown()
@@ -22,11 +23,7 @@ public class CountdownTimer : MonoBehaviour
             yield return new WaitForSeconds(1f);
             timeLeft--;
 
-            if (timeLeft == 60)
-            {
-                countdownText.text = "01:00";
-            }
-            else if (timeLeft <= 9)
+            if (timeLeft <= 9)
             {
                 countdownText.text = "00:0" + timeLeft;
             }
