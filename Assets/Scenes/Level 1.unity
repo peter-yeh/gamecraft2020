@@ -2723,7 +2723,7 @@ GameObject:
   - component: {fileID: 1953440041}
   - component: {fileID: 1953440043}
   m_Layer: 0
-  m_Name: BgMusic
+  m_Name: LevelMusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3267,12 +3267,6 @@ MonoBehaviour:
   audioManager: {fileID: 171960800}
   playerHealth: {fileID: 1675272252}
   health: 3
-  recipesObject:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  timeUpMenu: {fileID: 0}
-  timeUpText: {fileID: 0}
   icySpeed: 3
 --- !u!4 &1107328855090506
 Transform:
