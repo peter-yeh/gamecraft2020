@@ -69,14 +69,17 @@ public class TimeUp : MonoBehaviour
     {
         go.SetActive(true);
 
-        while(true)
+        for (int i = 0; i < 5; i ++)
         {
-            Debug.Log("Changing color:" + go.GetComponent<Image>());
-            go.GetComponent<Image>().color = new Color(255, 255, 255);
+            go.GetComponent<Image>().color = Color.white;
 
             yield return wait;
 
-            go.GetComponent<Image>().color = new Color(56, 56, 56);
+            go.GetComponent<Image>().color = Color.grey;
+
+            yield return wait;
+
+            //Debug.Log("Reduced colour of food:" + go.GetComponent<Image>());
         }
     }
 

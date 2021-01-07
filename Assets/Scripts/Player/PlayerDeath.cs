@@ -30,10 +30,15 @@ public class PlayerDeath : MonoBehaviour
 
     public IEnumerator RespawnAfterDelay()
     { // Respawn player
-        player.GetComponent<Rigidbody2D>().Sleep();
-        player.GetComponent<Rigidbody2D>().gravityScale = 0;
+
+        //player.GetComponent<Rigidbody2D>().Sleep();
+        //player.GetComponent<Rigidbody2D>().gravityScale = 0;
+        //player.GetComponent<BoxCollider2D>().enabled = false;
+        
+        
         player.GetComponent<playerMovement>().enabled = false;
-        player.GetComponent<BoxCollider2D>().enabled = false;
+
+
         player.transform.position = RespawnPoint.position;
 
         for (int i = 0; i < 5; i++)
@@ -41,14 +46,19 @@ public class PlayerDeath : MonoBehaviour
             //transform.localScale *= 1.5f;
             //player.GetComponent<SpriteRenderer>().color = Color.white;
             yield return new WaitForSeconds(.5f);
-            //player.GetComponent<SpriteRenderer>().color = Color.;
+            //player.GetComponent<SpriteRenderer>().color = Color.grey;
             //transform.localScale /= 1.5f;
         }
 
-        player.GetComponent<Rigidbody2D>().WakeUp();
-        player.GetComponent<Rigidbody2D>().gravityScale = 1.5f;
+
         player.GetComponent<playerMovement>().enabled = true;
-        player.GetComponent<BoxCollider2D>().enabled = true;
+
+
+        //player.GetComponent<Rigidbody2D>().WakeUp();
+        //player.GetComponent<Rigidbody2D>().gravityScale = 1.5f;
+        //player.GetComponent<BoxCollider2D>().enabled = true;
+
+        Debug.Log("Player respwan finish");
         isDead = false;
 
     }

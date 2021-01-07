@@ -159,10 +159,10 @@ public class playerMovement : MonoBehaviour
                 {
                     // Game over
                     audioManager.GetComponent<SoundEffects>().PlaySound("GameOver");
-                    Debug.Log("Health less than or equals to 0");
+                    //Debug.Log("Health less than or equals to 0");
                 }
                 playerHealth.decreaseHealth();
-                Debug.Log("Collision with bomb \n Health left: " + health);
+                //Debug.Log("Collision with bomb \n Health left: " + health);
                 break;
 
             case "Fire":
@@ -173,10 +173,10 @@ public class playerMovement : MonoBehaviour
                 if (health <= 0)
                 {
                     // Game over
-                    Debug.Log("Health less than or equals to 0");
+                    //Debug.Log("Health less than or equals to 0");
                 }
                 playerHealth.decreaseHealth();
-                Debug.Log("Touched Fire \n Health left: " + health);
+                //Debug.Log("Touched Fire \n Health left: " + health);
 
                 break;
 
@@ -186,7 +186,7 @@ public class playerMovement : MonoBehaviour
                 ingredientBasket[0]++;
                 counter.add(1);
                 //Instantiate(foodExplosion, transform.position, transform.rotation);
-                Debug.Log("Collected food1, it is now: " + ingredientBasket[0]);
+                //Debug.Log("Collected food1, it is now: " + ingredientBasket[0]);
                 break;
 
             case "Food2": // Chocolate, Seaweed, Lettuce, Egg

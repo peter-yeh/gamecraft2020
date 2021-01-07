@@ -20,7 +20,7 @@ public class IngredientsSpawner : MonoBehaviour
 
     private IEnumerator IngredientWave()
     {
-        WaitForSeconds wait = new WaitForSeconds(0.1f);
+        WaitForSeconds wait = new WaitForSeconds(respawnTime);
 
         while (true)
         {
@@ -31,7 +31,7 @@ public class IngredientsSpawner : MonoBehaviour
 
             if (choice == 5)
             {
-                //DropFromSky(bomb);
+                DropFromSky(bomb);
                 //Debug.Log("Spawning bomb");
             }
             else
