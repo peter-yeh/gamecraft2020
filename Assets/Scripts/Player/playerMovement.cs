@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerMovement : MonoBehaviour
 {
@@ -102,38 +103,42 @@ public class playerMovement : MonoBehaviour
     private int[] ingredientBasket = new int[5];
     public void TimeUp()
     {
-        Time.timeScale = 0f;
-        timeUpMenu.SetActive(true);
-        int level = Storage.GetStorage().GetCurrentLevel();
-        List<int> recipeUnlocked = LevelUnlocked.Unlock(ingredientBasket, level);
 
-        Debug.Log("The ingredient basket is: " + String.Join(", ", ingredientBasket));
-        Debug.Log("The recipe unlocked is: " + String.Join(", ", recipeUnlocked));
-
-        foreach (int i in recipeUnlocked)
-        {
-            recipesObject[i].SetActive(true);
-            if (i < 3)
-            {
-                Storage.GetStorage().SetLevelUnlocked(2);
-            }
-            if (i >= 3)
-            {
-                Storage.GetStorage().SetLevelUnlocked(3);
-            }
+        SceneManager.LoadScene(7);
+        Storage.GetStorage().ingredientBasket = ingredientBasket;
 
 
-        }
+        //timeUpMenu.SetActive(true);
+        //int level = Storage.GetStorage().GetCurrentLevel();
+        //List<int> recipeUnlocked = LevelUnlocked.Unlock(ingredientBasket, level);
 
-        if (recipeUnlocked.Count == 0)
-        {
-            // help meeee idk how to use the text pro...
-            timeUpText.GetComponent<TextMeshProUGUI>().text += "\n Oh no, no new recipes unlocked";
-        }
-        else
-        {
-            timeUpText.GetComponent<TextMeshProUGUI>().text += "Yay! You unlocked " + recipeUnlocked.Count + " new recipes";
-        }
+        //Debug.Log("The ingredient basket is: " + String.Join(", ", ingredientBasket));
+        //Debug.Log("The recipe unlocked is: " + String.Join(", ", recipeUnlocked));
+
+        //foreach (int i in recipeUnlocked)
+        //{
+        //    recipesObject[i].SetActive(true);
+        //    if (i < 3)
+        //    {
+        //        Storage.GetStorage().SetLevelUnlocked(2);
+        //    }
+        //    if (i >= 3)
+        //    {
+        //        Storage.GetStorage().SetLevelUnlocked(3);
+        //    }
+
+
+        //}
+
+        //if (recipeUnlocked.Count == 0)
+        //{
+        //    // help meeee idk how to use the text pro...
+        //    timeUpText.GetComponent<TextMeshProUGUI>().text += "\n Oh no, no new recipes unlocked";
+        //}
+        //else
+        //{
+        //    timeUpText.GetComponent<TextMeshProUGUI>().text += "Yay! You unlocked " + recipeUnlocked.Count + " new recipes";
+        //}
 
 
     }

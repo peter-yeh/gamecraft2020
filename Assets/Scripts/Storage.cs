@@ -3,6 +3,7 @@
 public class Storage
 {
     private static Storage Instance;
+    public int[] ingredientBasket = new int[5];
 
     private Storage() { }
 

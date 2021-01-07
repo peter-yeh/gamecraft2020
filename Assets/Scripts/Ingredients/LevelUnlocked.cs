@@ -11,7 +11,7 @@ public class LevelUnlocked
 
     private LevelUnlocked() { }
 
-    /// Returns a list of integers, 0,1,2
+    /// Returns a list of integers, 0,1,2,3,4,5,6,7,8
     /// Each int corresponds to recipe unlocked for that particular level
     public static List<int> Unlock(int[] ingredientsBasket, int currLevel)
     {
@@ -75,7 +75,7 @@ public class LevelUnlocked
                 ingredientsBasket[2]--;
                 ingredientsBasket[3]--;
                 ingredientsBasket[4]--;
-                s.SetReceipeUnlocked(1); // unlocked strawberry smoothie
+                s.SetReceipeUnlocked(2); // unlocked strawberry smoothie
                 l.Add(2);
             }
         }
@@ -99,8 +99,8 @@ public class LevelUnlocked
                 ingredientsBasket[0]--;
                 ingredientsBasket[1]--;
                 ingredientsBasket[2]--;
-                s.SetReceipeUnlocked(0); // unlocked cucumber maki
-                l.Add(0);
+                s.SetReceipeUnlocked(3); // unlocked cucumber maki
+                l.Add(3);
                 //Level3Button.interactable = true;
                 //Level3Lock.enabled = false;
             }
@@ -118,8 +118,8 @@ public class LevelUnlocked
                 ingredientsBasket[0]--;
                 ingredientsBasket[1]--;
                 ingredientsBasket[3]--;
-                s.SetReceipeUnlocked(1); // unlocked salmon gunkan
-                l.Add(1);
+                s.SetReceipeUnlocked(4); // unlocked salmon gunkan
+                l.Add(4);
             }
         }
 
@@ -134,8 +134,8 @@ public class LevelUnlocked
                 ingredientsBasket[1]--;
                 ingredientsBasket[3]--;
                 ingredientsBasket[4]--;
-                s.SetReceipeUnlocked(1); // unlocked california roll
-                l.Add(2);
+                s.SetReceipeUnlocked(5); // unlocked california roll
+                l.Add(5);
             }
         }
 
@@ -163,8 +163,8 @@ public class LevelUnlocked
                 ingredientsBasket[3]--;
                 ingredientsBasket[4]--;
 
-                s.SetReceipeUnlocked(0); // unlocked burger
-                l.Add(0);
+                s.SetReceipeUnlocked(6); // unlocked burger
+                l.Add(6);
             }
             else
             { // do nothing since not enough ingredients
@@ -180,8 +180,8 @@ public class LevelUnlocked
                 ingredientsBasket[0]--;
                 ingredientsBasket[2]--;
                 ingredientsBasket[3]--;
-                s.SetReceipeUnlocked(1); // unlocked hotdog
-                l.Add(1);
+                s.SetReceipeUnlocked(7); // unlocked hotdog
+                l.Add(7);
             }
         }
 
@@ -196,8 +196,8 @@ public class LevelUnlocked
                 ingredientsBasket[1]--;
                 ingredientsBasket[3]--;
                 ingredientsBasket[4]--;
-                s.SetReceipeUnlocked(1); // unlocked sandwich
-                l.Add(2);
+                s.SetReceipeUnlocked(8); // unlocked sandwich
+                l.Add(8);
             }
         }
 
