@@ -12,17 +12,23 @@ public class UnlockLevels : MonoBehaviour
     [SerializeField] private Image level3Lock;
     [SerializeField] private GameObject[] foods;
 
+    [SerializeField] private Image bg;
+    [SerializeField] private Sprite level1Passed;
+    [SerializeField] private Sprite level2Passed;
+    [SerializeField] private Sprite level3Passed;
+    [SerializeField] private Sprite level4Passed; //bonus level
 
     public void Start()
     {
-
         if (Storage.GetStorage().IsLevelUnlocked(2))
         {
             UnlockLevel2();
+            UpdateBackground(1);
         }
         if (Storage.GetStorage().IsLevelUnlocked(3))
         {
             UnlockLevel3();
+            UpdateBackground(2);
         }
 
         InitialiseFoods();
@@ -51,5 +57,22 @@ public class UnlockLevels : MonoBehaviour
         }
     }
 
-
+    public void UpdateBackground(int level)
+    {
+        switch (level)
+        {
+            case 1:
+                bg.sprite = level1Passed;
+                break;
+            case 2:
+                bg.sprite = level2Passed;
+                break;
+            case 3:
+                bg.sprite = level3Passed;
+                break;
+            case 4:
+                bg.sprite = level4Passed;
+                break;
+        }
+    }
 }

@@ -7,8 +7,7 @@ public class BlobCount : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI countText;
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
         countText.text = Storage.GetStorage().getBlobCount().ToString();
     }
