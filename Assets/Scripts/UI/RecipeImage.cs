@@ -9,7 +9,9 @@ public class RecipeImage : MonoBehaviour, IPointerExitHandler, IPointerEnterHand
 {
     [SerializeField] GameObject recipe;
     [SerializeField] private TextMeshProUGUI pun;
+    [SerializeField] private TextMeshProUGUI name;
     [SerializeField] private string punLine;
+    [SerializeField] private string nameLine;
 
     private Image image;
     private Color imageColor;
@@ -25,7 +27,7 @@ public class RecipeImage : MonoBehaviour, IPointerExitHandler, IPointerEnterHand
         image.color = new Color32(255, 255, 255, 1);
         recipe.SetActive(true);
         pun.text = punLine;
-        Debug.Log("Mouse Enter");
+        name.text = nameLine;
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -33,6 +35,6 @@ public class RecipeImage : MonoBehaviour, IPointerExitHandler, IPointerEnterHand
         image.color = imageColor;
         recipe.SetActive(false);
         pun.text = "";
-        Debug.Log("Mouse Exit");
+        name.text = "";
     }
 }

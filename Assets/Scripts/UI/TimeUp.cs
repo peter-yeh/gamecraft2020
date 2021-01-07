@@ -55,7 +55,7 @@ public class TimeUp : MonoBehaviour
                 }
                 if (j == 9)
                 {
-                    Storage.GetStorage().setCompleted8Recipes();
+                    Storage.GetStorage().setCompleted9Recipes();
                 }
             }
             if (i == 9)

@@ -36,7 +36,7 @@ public class UnlockLevels : MonoBehaviour
         if (Storage.GetStorage().IsLevelUnlocked(4))
         {
             UpdateBackground(3);
-            if (Storage.GetStorage().hasCompleted8Recipes())
+            if (Storage.GetStorage().hasCompleted9Recipes())
             {
                 UnlockLevel4();
             }
