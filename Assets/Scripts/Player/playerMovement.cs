@@ -27,8 +27,6 @@ public class playerMovement : MonoBehaviour
     [SerializeField] private PlayerHealth playerHealth;
     [SerializeField] private int health = 3;
 
-    public float knockbackAmount;
-
     private void Update()
     {
         mx = Input.GetAxisRaw("Horizontal");
@@ -166,14 +164,10 @@ public class playerMovement : MonoBehaviour
                 break;
 
             case "Fire":
-                //audioManager.GetComponent<SoundEffects>().PlaySound("Explosion");
+                audioManager.GetComponent<SoundEffects>().PlaySound("Explosion");
                 health--;
-                //Vector2 direction = (this.transform.position - col.transform.position).normalized;
-                //transform.position = Vector2.MoveTowards(transform.position, col.transform.position, -knockbackAmount * Time.deltaTime);
-                //rb.AddForce(direction * knockbackAmount, ForceMode2D.Force);
-                //this.transform.Translate(direction * knockbackAmount);
-                //GameObject explosion = Instantiate(bombExplosion, transform.position, transform.rotation);
-                //Destroy(explosion, 2f); // 2s delay before destroying clone
+                GameObject fireHurt = Instantiate(bombExplosion, transform.position, transform.rotation);
+                Destroy(fireHurt, 2f); // 2s delay before destroying clone
                 if (health <= 0)
                 {
                     // Game over

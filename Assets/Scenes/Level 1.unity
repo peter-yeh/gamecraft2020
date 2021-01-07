@@ -3256,7 +3256,7 @@ MonoBehaviour:
   movementSpeed: 5
   rb: {fileID: 1107328855090511}
   anim: {fileID: 1107328855090497}
-  jumpForce: 8
+  jumpForce: 9
   doubleJump: 1
   feet: {fileID: 3069567028658346630}
   groundLayers:
@@ -3267,7 +3267,6 @@ MonoBehaviour:
   audioManager: {fileID: 171960800}
   playerHealth: {fileID: 1675272252}
   health: 3
-  knockbackAmount: 0
   recipesObject:
   - {fileID: 0}
   - {fileID: 0}
@@ -3382,7 +3381,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0.2
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.5
   m_Material: {fileID: 6200000, guid: 728eef888ed25354c9dc260dd56070c4, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1

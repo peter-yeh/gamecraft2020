@@ -862,7 +862,7 @@ TextureImporter:
     second: FOOD_285
   - first:
       213: -3178908726182687211
-    second: FOOD_286
+    second: Egg
   - first:
       213: -8928403172045492137
     second: FOOD_287
@@ -1234,7 +1234,7 @@ TextureImporter:
     second: FOOD_409
   - first:
       213: -970179368045749789
-    second: FOOD_410
+    second: Chocolate Square
   - first:
       213: 6066254813533066379
     second: Chocolate Bar
@@ -6735,7 +6735,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FOOD_286
+      name: Egg
       rect:
         serializedVersion: 2
         x: 186
@@ -9003,7 +9003,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: FOOD_410
+      name: Chocolate Square
       rect:
         serializedVersion: 2
         x: 158

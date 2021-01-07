@@ -130,6 +130,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5923748294236488128, guid: 5778e936520f9ec4da9ae5ce1efbd80f,
         type: 3}
+      propertyPath: jumpForce
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923748294236488128, guid: 5778e936520f9ec4da9ae5ce1efbd80f,
+        type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 986349385}
@@ -146,7 +151,7 @@ PrefabInstance:
     - target: {fileID: 5923748294236488129, guid: 5778e936520f9ec4da9ae5ce1efbd80f,
         type: 3}
       propertyPath: m_GravityScale
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5923748294236488131, guid: 5778e936520f9ec4da9ae5ce1efbd80f,
         type: 3}
@@ -547,9 +552,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.3763027, y: -1.5486203}
+  m_Offset: {x: 1.3849357, y: -1.6723835}
   serializedVersion: 2
-  m_Radius: 0.73323125
+  m_Radius: 0.6181017
 --- !u!95 &175932032
 Animator:
   serializedVersion: 3
@@ -627,8 +632,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175932030}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.746041, y: 3.2748945, z: 10.301549}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalPosition: {x: -8.194, y: 4.15, z: 10.301549}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 419216983}
   m_RootOrder: 3
@@ -923,8 +928,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239679832}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.630001, y: 2.1100001, z: 10.301549}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: -6.630001, y: 2.402, z: 10.301549}
+  m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children: []
   m_Father: {fileID: 1743978776}
   m_RootOrder: 3
@@ -941,8 +946,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b43ba96072b04dd469751662334efdbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 15
+  thrust: 18
   trampolineController: {fileID: 239679837}
+  audioManager: {fileID: 986349385}
 --- !u!61 &239679835
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1593,8 +1599,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b43ba96072b04dd469751662334efdbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 15
+  thrust: 18
   trampolineController: {fileID: 442378202}
+  audioManager: {fileID: 986349385}
 --- !u!61 &442378200
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1720,8 +1727,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442378198}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.7200003, y: 2.1100001, z: 10.301549}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: -6.7200003, y: 2.39, z: 10.301549}
+  m_LocalScale: {x: 7, y: 7, z: 1}
   m_Children: []
   m_Father: {fileID: 1574710205}
   m_RootOrder: 3
@@ -3941,8 +3948,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322938360}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.76204, y: 3.2748945, z: 10.301549}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
+  m_LocalPosition: {x: -8.21, y: 4.15, z: 10.301549}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children: []
   m_Father: {fileID: 918058565}
   m_RootOrder: 3
@@ -3981,9 +3988,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.3763027, y: -1.5486203}
+  m_Offset: {x: 1.3763026, y: -1.6684325}
   serializedVersion: 2
-  m_Radius: 0.73323125
+  m_Radius: 0.61342037
 --- !u!95 &1322938364
 Animator:
   serializedVersion: 3
