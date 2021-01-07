@@ -46,6 +46,6 @@ public class PlayerHealth : MonoBehaviour
 
     public void showDeathMenu()
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(8);
     }
 }

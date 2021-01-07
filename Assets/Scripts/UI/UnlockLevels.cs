@@ -10,6 +10,9 @@ public class UnlockLevels : MonoBehaviour
 
     [SerializeField] private Button level3Button;
     [SerializeField] private Image level3Lock;
+
+    [SerializeField] private Button level4Button;
+
     [SerializeField] private GameObject[] foods;
 
     [SerializeField] private Image bg;
@@ -30,7 +33,15 @@ public class UnlockLevels : MonoBehaviour
             UnlockLevel3();
             UpdateBackground(2);
         }
-
+        if (Storage.GetStorage().IsLevelUnlocked(4))
+        {
+            UnlockLevel4();
+            UpdateBackground(3);
+        }
+        if (Storage.GetStorage().IsLevelUnlocked(5))
+        {
+            UpdateBackground(4);
+        }
         InitialiseFoods();
     }
 
@@ -44,6 +55,11 @@ public class UnlockLevels : MonoBehaviour
     {
         level3Button.interactable = true;
         level3Lock.enabled = false;
+    }
+
+    public void UnlockLevel4()
+    {
+        level4Button.gameObject.SetActive(true);
     }
 
     private void InitialiseFoods()

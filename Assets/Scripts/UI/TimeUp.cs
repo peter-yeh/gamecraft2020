@@ -33,11 +33,18 @@ public class TimeUp : MonoBehaviour
             {
                 Storage.GetStorage().SetLevelUnlocked(2);
             }
-            if (i >= 3)
+            if (i >= 3 && i < 6)
             {
                 Storage.GetStorage().SetLevelUnlocked(3);
             }
-
+            if (i >= 6 && i < 9)
+            {
+                Storage.GetStorage().SetLevelUnlocked(4);
+            }
+            if (i == 9)
+            {
+                Storage.GetStorage().SetLevelUnlocked(5);
+            }
 
         }
 

@@ -8,6 +8,7 @@ public class LevelSelect : MonoBehaviour
     [SerializeField] private GameObject level1;
     [SerializeField] private GameObject level2;
     [SerializeField] private GameObject level3;
+    [SerializeField] private GameObject level4;
 
     private int sceneID;
 
@@ -29,6 +30,9 @@ public class LevelSelect : MonoBehaviour
             case 3:
                 level3.SetActive(true);
                 break;
+            case 4:
+                level4.SetActive(true);
+                break;
         }
     }
 
@@ -37,6 +41,7 @@ public class LevelSelect : MonoBehaviour
         level1.SetActive(false);
         level2.SetActive(false);
         level3.SetActive(false);
+        level4.SetActive(false);
     }
 
     public void PlayLevel()
