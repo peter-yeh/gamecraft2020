@@ -11,10 +11,12 @@ public class LevelSelect : MonoBehaviour
 
     private int sceneID;
 
+    // levelID 1,2,3
     public void SelectLevel(int levelID)
     {
         sceneID = levelID + 2;
         Storage.GetStorage().SetCurrentLevel(levelID);
+        Debug.Log("The level selected is: " + levelID);
 
         switch (levelID)
         {

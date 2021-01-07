@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DeathMenu.unity
     guid: 4f056646d432bda4983d6a9544d4d937
+  - enabled: 1
+    path: Assets/Scenes/TimeUp.unity
+    guid: 6265d4d81217d49448be5f5b40103b7e
   m_configObjects: {}

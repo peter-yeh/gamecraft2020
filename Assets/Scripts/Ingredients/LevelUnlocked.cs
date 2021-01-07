@@ -32,7 +32,6 @@ public class LevelUnlocked
     // Orange, Chocolate, Milk, Ice, Strawberry
     private List<int> UnlockLevel1(int[] ingredientsBasket) // drinks theme
     {
-        PlayerPrefs.DeleteAll(); // todo remove this before production
         Storage s = Storage.GetStorage();
         List<int> l = new List<int>();
 
@@ -40,7 +39,7 @@ public class LevelUnlocked
         {
             // checks if there's enogh ingredients to unlock orange juice
             if (ingredientsBasket[0] >= 1 && // orange
-             ingredientsBasket[3] >= 1) //  ice
+             ingredientsBasket[3] >= 1) // ice
             {
                 ingredientsBasket[0]--;
                 ingredientsBasket[3]--;
@@ -204,10 +203,5 @@ public class LevelUnlocked
 
         return l;
     }
-
-
-
-
-
 
 }

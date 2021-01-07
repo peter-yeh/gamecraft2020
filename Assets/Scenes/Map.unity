@@ -10640,6 +10640,16 @@ MonoBehaviour:
   level2Lock: {fileID: 1753541061}
   level3Button: {fileID: 556695144}
   level3Lock: {fileID: 285829819}
+  foods:
+  - {fileID: 524801968}
+  - {fileID: 1008021499}
+  - {fileID: 1949148045}
+  - {fileID: 2094623689}
+  - {fileID: 458516870}
+  - {fileID: 1576106447}
+  - {fileID: 269903944}
+  - {fileID: 617138969}
+  - {fileID: 614484219}
 --- !u!1 &2059198687
 GameObject:
   m_ObjectHideFlags: 0
