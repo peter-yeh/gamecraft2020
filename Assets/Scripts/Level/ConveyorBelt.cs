@@ -15,6 +15,7 @@ public class ConveyorBelt : MonoBehaviour
     public float isRight;
     private float flipDirectionTime = 0.0f;
     public float durationBeforeFlip;
+    public bool oneBeltOnly;
 
     public GameObject greenBelt;
     public GameObject redBelt;
@@ -40,37 +41,42 @@ public class ConveyorBelt : MonoBehaviour
 
     private void switchBelts()
     {
-        if (isRight == 1)
+        if (!oneBeltOnly)
         {
-            greenBelt.SetActive(true);
-            redBelt.SetActive(false);
-        } else
-        {
-            greenBelt.SetActive(false);
-            redBelt.SetActive(true);
-        }
-    }
-        void OnCollisionEnter2D(Collision2D col)
-        {
-            //Enter is good for a player detetion because we just need when the player first enters the collider.
-            // The player will need a rigidbody2d for this detection to work.
-            if (col.gameObject.tag == "Player")
+            if (isRight == 1)
             {
-                // "Player" is a standard tag in the editor you can change your player's tag in the drop down.
-                Debug.Log("Player in the coveyor");
-                // Remeber to always delete uncessary debugs before building.
-                playerObj = col.gameObject;
-                playerInCollider = true;
+                greenBelt.SetActive(true);
+                redBelt.SetActive(false);
             }
-        }
-        void OnCollisionExit2D(Collision2D col)
-        {
-            if (col.gameObject.tag == "Player")
+            else
             {
-                // "Player" is a standard tag in the editor you can change your player's tag in the drop down.
-                Debug.Log("Player left the coveyor");
-                // Remeber to always delete uncessary debus before building.
-                playerInCollider = false;
+                greenBelt.SetActive(false);
+                redBelt.SetActive(true);
             }
         }
     }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        //Enter is good for a player detetion because we just need when the player first enters the collider.
+        // The player will need a rigidbody2d for this detection to work.
+        if (col.gameObject.tag == "Player")
+        {
+            // "Player" is a standard tag in the editor you can change your player's tag in the drop down.
+            Debug.Log("Player in the coveyor");
+            // Remeber to always delete uncessary debugs before building.
+            playerObj = col.gameObject;
+            playerInCollider = true;
+        }
+    }
+    void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            // "Player" is a standard tag in the editor you can change your player's tag in the drop down.
+            Debug.Log("Player left the coveyor");
+            // Remeber to always delete uncessary debus before building.
+            playerInCollider = false;
+        }
+    }
+}
