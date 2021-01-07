@@ -11,23 +11,24 @@ public class TimeUp : MonoBehaviour
 
     [SerializeField] private GameObject[] recipesObject;
     [SerializeField] private GameObject timeUpText;
-    private WaitForSeconds wait = new WaitForSeconds(0.4f);
+    private WaitForSeconds wait = new WaitForSeconds(0.3f);
 
     private void Start()
     {
-
-
         int level = Storage.GetStorage().GetCurrentLevel();
         int[] ingredientBasket = Storage.GetStorage().ingredientBasket;
 
         List<int> recipeUnlocked = LevelUnlocked.Unlock(ingredientBasket, level);
+        List<GameObject> tempList = new List<GameObject>();
 
         //Debug.Log("The ingredient basket is: " + String.Join(", ", ingredientBasket));
         //Debug.Log("The recipe unlocked is: " + String.Join(", ", recipeUnlocked));
 
         foreach (int i in recipeUnlocked)
         {
-            StartCoroutine(Flash(recipesObject[i]));
+            //StartCoroutine(Flash(recipesObject[i]));
+            tempList.Add(recipesObject[i]);
+
 
             if (i < 3)
             {
@@ -67,13 +68,14 @@ public class TimeUp : MonoBehaviour
 
         if (recipeUnlocked.Count == 0)
         {
-            // help meeee idk how to use the text pro...
             timeUpText.GetComponent<TextMeshProUGUI>().text += "\n Oh no, no new recipes unlocked";
         }
         else
         {
             timeUpText.GetComponent<TextMeshProUGUI>().text += "Yay! You unlocked " + recipeUnlocked.Count + " new recipes";
         }
+
+        StartCoroutine(ShowAndFlash(tempList));
     }
 
     public void QuitGame()
@@ -82,22 +84,48 @@ public class TimeUp : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    private IEnumerator Flash(GameObject go)
+    private IEnumerator ShowAndFlash(List<GameObject> gos)
     {
-        go.SetActive(true);
-
-        for (int i = 0; i < 5; i ++)
+        foreach (GameObject go in gos)
         {
-            go.GetComponent<Image>().color = Color.white;
-
-            yield return wait;
-
-            go.GetComponent<Image>().color = Color.grey;
-
-            yield return wait;
-
-            //Debug.Log("Reduced colour of food:" + go.GetComponent<Image>());
+            go.SetActive(true); // shows all recipes unlocked
         }
+
+        for (int i = 0; i < 5; i++)
+        {
+            foreach (GameObject go in gos) // this is to ensure they get lit up in sync
+            {
+                go.GetComponent<Image>().color = Color.white;
+            }
+
+            yield return wait;
+            foreach (GameObject go in gos)
+            {
+                go.GetComponent<Image>().color = Color.grey;
+            }
+            yield return wait;
+        }
+
+        //Debug.Log("Reduced colour of food:" + go.GetComponent<Image>());
     }
+
+
+    //private IEnumerator Flash(GameObject go)
+    //{
+    //    go.SetActive(true);
+
+    //    for (int i = 0; i < 5; i++)
+    //    {
+    //        go.GetComponent<Image>().color = Color.white;
+
+    //        yield return wait;
+
+    //        go.GetComponent<Image>().color = Color.grey;
+
+    //        yield return wait;
+
+    //        //Debug.Log("Reduced colour of food:" + go.GetComponent<Image>());
+    //    }
+    //}
 
 }
