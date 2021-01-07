@@ -979,6 +979,7 @@ GameObject:
   - component: {fileID: 1989122572}
   - component: {fileID: 1989122571}
   - component: {fileID: 1989122570}
+  - component: {fileID: 1989122574}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1071,3 +1072,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1989122574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989122569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e307f66b7d693674c8a36c65cca337d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 0
+  rb: {fileID: 0}
+  anim: {fileID: 0}
+  jumpForce: 10
+  doubleJump: 1
+  feet: {fileID: 0}
+  groundLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  bombExplosion: {fileID: 0}
+  audioManager: {fileID: 0}
+  playerHealth: {fileID: 0}
+  health: 3
+  knockbackAmount: 0
+  recipesObject: []
+  timeUpMenu: {fileID: 0}
+  timeUpText: {fileID: 0}
