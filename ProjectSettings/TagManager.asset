@@ -16,6 +16,7 @@ TagManager:
   - Fire
   - IceFloor
   - Portal
+  - Music
   layers:
   - Default
   - TransparentFX

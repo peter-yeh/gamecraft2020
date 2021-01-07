@@ -20,7 +20,9 @@ public class PlayerDeath : MonoBehaviour
             isDead = true;
             StartCoroutine(RespawnAfterDelay()); 
             playerHealth.decreaseHealth();
-            audioManager.GetComponent<SoundEffects>().PlaySound("GameOver");
+            if (!playerHealth.lastLife) {
+                audioManager.GetComponent<SoundEffects>().PlaySound("GameOver");
+            }
         }
     }
 

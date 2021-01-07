@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Image heart3;
 
     private int health = 3;
+    public bool lastLife = false; 
 
     public PlayerHealth()
     {
@@ -31,6 +32,7 @@ public class PlayerHealth : MonoBehaviour
                 break;
             case 0:
                 heart3.enabled = false;
+                lastLife = true;
                 showDeathMenu();
                 break;
         }
@@ -39,6 +41,7 @@ public class PlayerHealth : MonoBehaviour
     public void resetHealth()
     {
         health = 3;
+        lastLife = false;
     }
 
     public void showDeathMenu()
