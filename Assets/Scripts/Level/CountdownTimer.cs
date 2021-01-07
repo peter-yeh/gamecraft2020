@@ -18,7 +18,7 @@ public class CountdownTimer : MonoBehaviour
 
     private IEnumerator CountDown()
     {
-        while (timeLeft >= 0)
+        while (timeLeft > 0)
         {
             yield return new WaitForSeconds(1f);
             timeLeft--;

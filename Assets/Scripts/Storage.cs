@@ -64,4 +64,14 @@ public class Storage
     {
         PlayerPrefs.SetInt("LevelUnlocked" + i, 1);
     }
+
+    public bool hasCompleted8Recipes()
+    {
+        return PlayerPrefs.GetInt("TotalRecipes", 0) == 1;
+    }
+
+    public void setCompleted8Recipes()
+    {
+        PlayerPrefs.SetInt("TotalRecipes", 1);
+    }
 }

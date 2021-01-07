@@ -189,7 +189,7 @@ public class playerMovement : MonoBehaviour
                 //Debug.Log("Collected food1, it is now: " + ingredientBasket[0]);
                 break;
 
-            case "Food2": // Chocolate, Seaweed, Lettuce, Egg
+            case "Food2": // Chocolate, Seaweed, Lettuce, Chocolate
                 Destroy(col.gameObject); // Destroy the ingredient
                 audioManager.GetComponent<SoundEffects>().PlaySound("Ingredient");
                 ingredientBasket[1]++;
@@ -198,7 +198,7 @@ public class playerMovement : MonoBehaviour
                 //Debug.Log("Collected food2, it is now: " + ingredientBasket[1]);
                 break;
 
-            case "Food3": // Milk, Cucumber, Meat, Chocolate
+            case "Food3": // Milk, Cucumber, Meat, Milk
                 Destroy(col.gameObject); // Destroy the ingredient
                 audioManager.GetComponent<SoundEffects>().PlaySound("Ingredient");
                 ingredientBasket[2]++;
@@ -207,7 +207,7 @@ public class playerMovement : MonoBehaviour
                 //Debug.Log("Collected food3, it is now: " + ingredientBasket[2]);
                 break;
 
-            case "Food4": // Ice, Salmon, Ketchup, Milk
+            case "Food4": // Ice, Salmon, Ketchup, Egg
                 Destroy(col.gameObject); // Destroy the ingredient
                 audioManager.GetComponent<SoundEffects>().PlaySound("Ingredient");
                 ingredientBasket[3]++;
