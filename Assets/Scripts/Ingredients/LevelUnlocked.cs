@@ -1,8 +1,14 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelUnlocked
 {
+    //[SerializeField] private Button Level2Button;
+    //[SerializeField] private Image Level2Lock;
+    //[SerializeField] private Button Level3Button;
+    //[SerializeField] private Image Level3Lock;
+
     private LevelUnlocked() { }
 
     /// Returns a list of integers, 0,1,2
@@ -40,6 +46,9 @@ public class LevelUnlocked
                 ingredientsBasket[3]--;
                 s.SetReceipeUnlocked(0); // unlocked orange juice
                 l.Add(0);
+                //Level2Button.interactable = true;
+                //Level2Lock.enabled = false;
+                //s.AddBlobCount(9999);
             }
             else
             { // do nothing since not enough ingredients
@@ -93,6 +102,8 @@ public class LevelUnlocked
                 ingredientsBasket[2]--;
                 s.SetReceipeUnlocked(0); // unlocked cucumber maki
                 l.Add(0);
+                //Level3Button.interactable = true;
+                //Level3Lock.enabled = false;
             }
             else
             { // do nothing since not enough ingredients

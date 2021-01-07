@@ -26,6 +26,12 @@ public class Storage
         PlayerPrefs.SetInt("BlobCount", c);
     }
 
+    public void AddBlobCount(int add)
+    {
+        int originalCount = getBlobCount();
+        PlayerPrefs.SetInt("BlobCount", originalCount + add);
+    }
+
     public int GetCurrentLevel()
     {
         return PlayerPrefs.GetInt("CurrentLevel", 1);
