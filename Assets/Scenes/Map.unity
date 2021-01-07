@@ -6478,7 +6478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   recipe: {fileID: 1403827983}
   pun: {fileID: 666942428}
-  punLine: 
+  punLine: What drink is never on time? Hot chocoLATE
 --- !u!1 &1087191000
 GameObject:
   m_ObjectHideFlags: 0
