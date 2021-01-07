@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TimeUp : MonoBehaviour
 {
 
     [SerializeField] private GameObject[] recipesObject;
     [SerializeField] private GameObject timeUpText;
-    private WaitForSeconds wait = new WaitForSeconds(0.5f);
+    private WaitForSeconds wait = new WaitForSeconds(0.4f);
 
     private void Start()
     {
@@ -21,12 +22,12 @@ public class TimeUp : MonoBehaviour
 
         List<int> recipeUnlocked = LevelUnlocked.Unlock(ingredientBasket, level);
 
-        Debug.Log("The ingredient basket is: " + String.Join(", ", ingredientBasket));
-        Debug.Log("The recipe unlocked is: " + String.Join(", ", recipeUnlocked));
+        //Debug.Log("The ingredient basket is: " + String.Join(", ", ingredientBasket));
+        //Debug.Log("The recipe unlocked is: " + String.Join(", ", recipeUnlocked));
 
         foreach (int i in recipeUnlocked)
         {
-            recipesObject[i].SetActive(true);
+            StartCoroutine(Flash(recipesObject[i]));
 
             if (i < 3)
             {
@@ -59,11 +60,16 @@ public class TimeUp : MonoBehaviour
 
     private IEnumerator Flash(GameObject go)
     {
-        for (int i = 0; i < 4; i++)
+        go.SetActive(true);
+
+        while(true)
         {
-            go.SetActive(true);
-            yield return new WaitForSeconds(0.5f);
-            go.SetActive(false);
+            Debug.Log("Changing color:" + go.GetComponent<Image>());
+            go.GetComponent<Image>().color = new Color(255, 255, 255);
+
+            yield return wait;
+
+            go.GetComponent<Image>().color = new Color(56, 56, 56);
         }
     }
 
