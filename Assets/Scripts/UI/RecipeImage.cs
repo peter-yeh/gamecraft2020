@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class RecipeImage : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
 {
     [SerializeField] GameObject recipe;
+    [SerializeField] private TextMeshProUGUI pun;
+    [SerializeField] private string punLine;
 
     private Image image;
     private Color imageColor;
@@ -21,6 +24,7 @@ public class RecipeImage : MonoBehaviour, IPointerExitHandler, IPointerEnterHand
     {
         image.color = new Color32(255, 255, 255, 1);
         recipe.SetActive(true);
+        pun.text = punLine;
         Debug.Log("Mouse Enter");
     }
 
@@ -28,6 +32,7 @@ public class RecipeImage : MonoBehaviour, IPointerExitHandler, IPointerEnterHand
     {
         image.color = imageColor;
         recipe.SetActive(false);
+        pun.text = "";
         Debug.Log("Mouse Exit");
     }
 }
