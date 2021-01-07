@@ -9,4 +9,10 @@ public class DeathMenu : MonoBehaviour
     {
         SceneManager.LoadScene(2);
     }
+
+    public void RestartLevel()
+    {
+        int currentLevel = Storage.GetStorage().GetCurrentLevel();
+        SceneManager.LoadScene(currentLevel + 2);
+    }
 }
