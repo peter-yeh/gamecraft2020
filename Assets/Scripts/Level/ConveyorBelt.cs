@@ -23,18 +23,16 @@ public class ConveyorBelt : MonoBehaviour
     // Update is called once per frame
     void Update()
         {
-        if (Time.time > flipDirectionTime)
-        {
-            flipDirectionTime += durationBeforeFlip;
-            isRight *= -1;
-            switchBelts();
+            if (Time.time > flipDirectionTime && !oneBeltOnly)
+            {
+                flipDirectionTime += durationBeforeFlip;
+                isRight *= -1;
+                switchBelts();
 
-        }
-            //We are building this script so that future iterations can handle multiple objects on the belt
+            }
+            
             if (playerInCollider)
             {
-                //This is one to go about motivating a non-rigidbody element. The player may have a rigidbody but the 
-                //controller input should be affecting his velocity so we don't want to mess with that
                 playerObj.transform.position += transform.right * isRight * (speed * Time.deltaTime);
             }
         }
