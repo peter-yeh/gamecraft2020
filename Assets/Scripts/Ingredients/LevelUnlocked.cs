@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class LevelUnlocked
 {
 
+    private int multiple = 3;
+
     private LevelUnlocked() { }
 
     /// Returns a list of integers, 0,1,2,3,4,5,6,7,8
@@ -36,11 +38,11 @@ public class LevelUnlocked
         if (!s.getRecipeUnlocked(0)) // if orange juice is not unlocked
         {
             // checks if there's enogh ingredients to unlock orange juice
-            if (ingredientsBasket[0] >= 1 && // orange
-             ingredientsBasket[3] >= 1) // ice
+            if (ingredientsBasket[0] >= multiple && // orange
+             ingredientsBasket[3] >= multiple) // ice
             {
-                ingredientsBasket[0]--;
-                ingredientsBasket[3]--;
+                ingredientsBasket[0] -= multiple;
+                ingredientsBasket[3] -= multiple;
                 s.SetReceipeUnlocked(0); // unlocked orange juice
                 l.Add(0);
                 s.AddBlobCount();
@@ -52,11 +54,11 @@ public class LevelUnlocked
 
         if (!s.getRecipeUnlocked(1))
         {
-            if (ingredientsBasket[1] >= 1 && // chocolate
-                ingredientsBasket[2] >= 1) // milk
+            if (ingredientsBasket[1] >= multiple && // chocolate
+                ingredientsBasket[2] >= multiple) // milk
             {
-                ingredientsBasket[1]--;
-                ingredientsBasket[2]--;
+                ingredientsBasket[1] -= multiple;
+                ingredientsBasket[2] -= multiple;
                 s.SetReceipeUnlocked(1); // unlocked hot chocolate
                 s.AddBlobCount();
                 l.Add(1);
@@ -65,13 +67,13 @@ public class LevelUnlocked
 
         if (!s.getRecipeUnlocked(2))
         {
-            if (ingredientsBasket[2] >= 1 && // milk
-                ingredientsBasket[3] >= 1 && // ice
-                ingredientsBasket[4] >= 1) // strawberry
+            if (ingredientsBasket[2] >= multiple && // milk
+                ingredientsBasket[3] >= multiple && // ice
+                ingredientsBasket[4] >= multiple) // strawberry
             {
-                ingredientsBasket[2]--;
-                ingredientsBasket[3]--;
-                ingredientsBasket[4]--;
+                ingredientsBasket[2] -= multiple;
+                ingredientsBasket[3] -= multiple;
+                ingredientsBasket[4] -= multiple;
                 s.SetReceipeUnlocked(2); // unlocked strawberry smoothie
                 s.AddBlobCount();
                 l.Add(2);
@@ -90,13 +92,13 @@ public class LevelUnlocked
         if (!s.getRecipeUnlocked(3)) // if orange juice is not unlocked
         {
             // checks if there's enogh ingredients to unlock orange juice
-            if (ingredientsBasket[0] >= 1 && // rice
-             ingredientsBasket[1] >= 1 && // seaweed
-             ingredientsBasket[2] >= 1) // cucumber
+            if (ingredientsBasket[0] >= multiple && // rice
+             ingredientsBasket[1] >= multiple && // seaweed
+             ingredientsBasket[2] >= multiple) // cucumber
             {
-                ingredientsBasket[0]--;
-                ingredientsBasket[1]--;
-                ingredientsBasket[2]--;
+                ingredientsBasket[0] -= multiple;
+                ingredientsBasket[1] -= multiple;
+                ingredientsBasket[2] -= multiple;
                 s.SetReceipeUnlocked(3); // unlocked cucumber maki
                 s.AddBlobCount();
                 l.Add(3);
@@ -108,13 +110,13 @@ public class LevelUnlocked
 
         if (!s.getRecipeUnlocked(4))
         {
-            if (ingredientsBasket[0] >= 1 && // rice
-                ingredientsBasket[1] >= 1 && // seaweed
-                ingredientsBasket[3] >= 1) // salmon
+            if (ingredientsBasket[0] >= multiple && // rice
+                ingredientsBasket[1] >= multiple && // seaweed
+                ingredientsBasket[3] >= multiple) // salmon
             {
-                ingredientsBasket[0]--;
-                ingredientsBasket[1]--;
-                ingredientsBasket[3]--;
+                ingredientsBasket[0] -= multiple;
+                ingredientsBasket[1] -= multiple;
+                ingredientsBasket[3] -= multiple;
                 s.SetReceipeUnlocked(4); // unlocked salmon gunkan
                 s.AddBlobCount();
                 l.Add(4);
@@ -123,15 +125,15 @@ public class LevelUnlocked
 
         if (!s.getRecipeUnlocked(5))
         {
-            if (ingredientsBasket[0] >= 1 && // rice
-                ingredientsBasket[1] >= 1 && // seaweed
-                ingredientsBasket[3] >= 1 && // salmon
-                ingredientsBasket[4] >= 1) // avocado
+            if (ingredientsBasket[0] >= multiple && // rice
+                ingredientsBasket[1] >= multiple && // seaweed
+                ingredientsBasket[3] >= multiple && // salmon
+                ingredientsBasket[4] >= multiple) // avocado
             {
-                ingredientsBasket[0]--;
-                ingredientsBasket[1]--;
-                ingredientsBasket[3]--;
-                ingredientsBasket[4]--;
+                ingredientsBasket[0] -= multiple;
+                ingredientsBasket[1] -= multiple;
+                ingredientsBasket[3] -= multiple;
+                ingredientsBasket[4] -= multiple;
                 s.SetReceipeUnlocked(5); // unlocked california roll
                 s.AddBlobCount();
                 l.Add(5);
@@ -150,17 +152,17 @@ public class LevelUnlocked
         if (!s.getRecipeUnlocked(6)) // if orange juice is not unlocked
         {
             // checks if there's enogh ingredients to unlock orange juice
-            if (ingredientsBasket[0] >= 1 && // Bun
-             ingredientsBasket[1] >= 1 && // Lettuce
-             ingredientsBasket[2] >= 1 && // Meat
-             ingredientsBasket[3] >= 1 && // Ketchup
-             ingredientsBasket[4] >= 1) //  Cheese
+            if (ingredientsBasket[0] >= multiple && // Bun
+             ingredientsBasket[1] >= multiple && // Lettuce
+             ingredientsBasket[2] >= multiple && // Meat
+             ingredientsBasket[3] >= multiple && // Ketchup
+             ingredientsBasket[4] >= multiple) //  Cheese
             {
-                ingredientsBasket[0]--;
-                ingredientsBasket[1]--;
-                ingredientsBasket[2]--;
-                ingredientsBasket[3]--;
-                ingredientsBasket[4]--;
+                ingredientsBasket[0] -= multiple;
+                ingredientsBasket[1] -= multiple;
+                ingredientsBasket[2] -= multiple;
+                ingredientsBasket[3] -= multiple;
+                ingredientsBasket[4] -= multiple;
 
                 s.SetReceipeUnlocked(6); // unlocked burger
                 s.AddBlobCount();
@@ -173,13 +175,13 @@ public class LevelUnlocked
 
         if (!s.getRecipeUnlocked(7))
         {
-            if (ingredientsBasket[0] >= 1 && // bun
-                ingredientsBasket[2] >= 1 && // meat
-                ingredientsBasket[3] >= 1) // ketchup
+            if (ingredientsBasket[0] >= multiple && // bun
+                ingredientsBasket[2] >= multiple && // meat
+                ingredientsBasket[3] >= multiple) // ketchup
             {
-                ingredientsBasket[0]--;
-                ingredientsBasket[2]--;
-                ingredientsBasket[3]--;
+                ingredientsBasket[0] -= multiple;
+                ingredientsBasket[2] -= multiple;
+                ingredientsBasket[3] -= multiple;
                 s.SetReceipeUnlocked(7); // unlocked hotdog
                 s.AddBlobCount();
                 l.Add(7);
@@ -188,15 +190,15 @@ public class LevelUnlocked
 
         if (!s.getRecipeUnlocked(8))
         {
-            if (ingredientsBasket[0] >= 1 && // bun
-                ingredientsBasket[1] >= 1 && // lettuce
-                ingredientsBasket[3] >= 1 && // ketchup
-                ingredientsBasket[4] >= 1) // cheese
+            if (ingredientsBasket[0] >= multiple && // bun
+                ingredientsBasket[1] >= multiple && // lettuce
+                ingredientsBasket[3] >= multiple && // ketchup
+                ingredientsBasket[4] >= multiple) // cheese
             {
-                ingredientsBasket[0]--;
-                ingredientsBasket[1]--;
-                ingredientsBasket[3]--;
-                ingredientsBasket[4]--;
+                ingredientsBasket[0] -= multiple;
+                ingredientsBasket[1] -= multiple;
+                ingredientsBasket[3] -= multiple;
+                ingredientsBasket[4] -= multiple;
                 s.SetReceipeUnlocked(8); // unlocked sandwich
                 s.AddBlobCount();
                 l.Add(8);
@@ -215,17 +217,17 @@ public class LevelUnlocked
         if (!s.getRecipeUnlocked(9)) // if cake is not unlocked
         {
             // checks if there's enogh ingredients to unlock cake
-            if (ingredientsBasket[0] >= 1 && // Flour
-             ingredientsBasket[1] >= 1 && // Egg
-             ingredientsBasket[2] >= 1 && // Chocolate
-             ingredientsBasket[3] >= 1 && // Milk
-             ingredientsBasket[4] >= 1) //  Butter
+            if (ingredientsBasket[0] >= multiple && // Flour
+             ingredientsBasket[1] >= multiple && // Egg
+             ingredientsBasket[2] >= multiple && // Chocolate
+             ingredientsBasket[3] >= multiple && // Milk
+             ingredientsBasket[4] >= multiple) //  Butter
             {
-                ingredientsBasket[0]--;
-                ingredientsBasket[1]--;
-                ingredientsBasket[2]--;
-                ingredientsBasket[3]--;
-                ingredientsBasket[4]--;
+                ingredientsBasket[0] -= multiple;
+                ingredientsBasket[1] -= multiple;
+                ingredientsBasket[2] -= multiple;
+                ingredientsBasket[3] -= multiple;
+                ingredientsBasket[4] -= multiple;
 
                 s.SetReceipeUnlocked(9); // unlocked cake
                 s.AddBlobCount();
