@@ -8,6 +8,7 @@ public class BlobSpawner : MonoBehaviour
     // todo populate the food lists
     [SerializeField] private List<GameObject> blobs;
     public float respawnTime;
+    public bool credits = false;
     private Vector2 screenBounds;
 
 
@@ -28,7 +29,14 @@ public class BlobSpawner : MonoBehaviour
             int choice = Random.Range(0, 3); // a number from 0,1,2
             // add in logic to spawn the blobs depending on their probabilty
             DropFromSky(blobs[choice]);
-           
+
+            if (!credits) {
+                DropFromSky(blobs[3]); 
+                DropFromSky(blobs[4]);                                  
+                DropFromSky(blobs[5]); 
+                DropFromSky(blobs[6]); 
+                credits = true;
+            }
         }
     }
 
