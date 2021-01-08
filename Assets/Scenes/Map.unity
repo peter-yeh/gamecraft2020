@@ -8886,7 +8886,7 @@ MonoBehaviour:
   pun: {fileID: 666942428}
   name: {fileID: 1255825833}
   punLine: "The cheese told the tomato, \u201CLettuce get together.\u201D"
-  nameLine: Sandwhich
+  nameLine: Sandwich
 --- !u!1 &1396002694
 GameObject:
   m_ObjectHideFlags: 0
@@ -9418,7 +9418,7 @@ MonoBehaviour:
   recipe: {fileID: 207995377}
   pun: {fileID: 666942428}
   name: {fileID: 1255825833}
-  punLine: This is how i roll
+  punLine: This is how I roll
   nameLine: California Roll
 --- !u!1 &1578168315
 GameObject:
