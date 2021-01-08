@@ -609,7 +609,7 @@ GameObject:
   - component: {fileID: 262904159}
   m_Layer: 0
   m_Name: blueblob_0 (1)
-  m_TagString: Untagged
+  m_TagString: Pegs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1052,7 +1052,7 @@ GameObject:
   - component: {fileID: 375832988}
   m_Layer: 0
   m_Name: yellowblob_0 (3)
-  m_TagString: Untagged
+  m_TagString: Pegs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1207,7 +1207,7 @@ GameObject:
   - component: {fileID: 388386472}
   m_Layer: 0
   m_Name: blueblob_0 (3)
-  m_TagString: Untagged
+  m_TagString: Pegs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1362,7 +1362,7 @@ GameObject:
   - component: {fileID: 482874266}
   m_Layer: 0
   m_Name: yellowblob_0 (4)
-  m_TagString: Untagged
+  m_TagString: Pegs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1796,7 +1796,7 @@ GameObject:
   - component: {fileID: 586591322}
   m_Layer: 0
   m_Name: yellowblob_0
-  m_TagString: Untagged
+  m_TagString: Pegs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1951,7 +1951,7 @@ GameObject:
   - component: {fileID: 611982357}
   m_Layer: 0
   m_Name: blueblob_0 (4)
-  m_TagString: Untagged
+  m_TagString: Pegs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2278,7 +2278,7 @@ GameObject:
   - component: {fileID: 701377616}
   m_Layer: 0
   m_Name: redblob_0 (1)
-  m_TagString: Untagged
+  m_TagString: Pegs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2433,7 +2433,7 @@ GameObject:
   - component: {fileID: 760272590}
   m_Layer: 0
   m_Name: blueblob_0 (2)
-  m_TagString: Untagged
+  m_TagString: Pegs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2588,7 +2588,7 @@ GameObject:
   - component: {fileID: 785007817}
   m_Layer: 0
   m_Name: yellowblob_0 (2)
-  m_TagString: Untagged
+  m_TagString: Pegs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2956,7 +2956,7 @@ GameObject:
   - component: {fileID: 908723692}
   m_Layer: 0
   m_Name: redblob_0 (3)
-  m_TagString: Untagged
+  m_TagString: Pegs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3111,7 +3111,7 @@ GameObject:
   - component: {fileID: 1092889290}
   m_Layer: 0
   m_Name: redblob_0 (4)
-  m_TagString: Untagged
+  m_TagString: Pegs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3393,7 +3393,7 @@ GameObject:
   - component: {fileID: 1111872646}
   m_Layer: 0
   m_Name: blueblob_0
-  m_TagString: Untagged
+  m_TagString: Pegs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4124,7 +4124,7 @@ GameObject:
   - component: {fileID: 1366482995}
   m_Layer: 0
   m_Name: yellowblob_0 (1)
-  m_TagString: Untagged
+  m_TagString: Pegs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4704,7 +4704,7 @@ GameObject:
   - component: {fileID: 1589374428}
   m_Layer: 0
   m_Name: redblob_0 (2)
-  m_TagString: Untagged
+  m_TagString: Pegs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5282,7 +5282,7 @@ GameObject:
   - component: {fileID: 1829782688}
   m_Layer: 0
   m_Name: redblob_0
-  m_TagString: Untagged
+  m_TagString: Pegs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5559,7 +5559,7 @@ GameObject:
   - component: {fileID: 1953233451}
   m_Layer: 0
   m_Name: Pegs
-  m_TagString: Untagged
+  m_TagString: Pegs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

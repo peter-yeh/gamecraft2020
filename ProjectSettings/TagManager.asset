@@ -17,6 +17,7 @@ TagManager:
   - IceFloor
   - Portal
   - Music
+  - Pegs
   layers:
   - Default
   - TransparentFX

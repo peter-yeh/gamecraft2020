@@ -226,13 +226,21 @@ public class playerMovement : MonoBehaviour
                 break;
 
             case "Portal":
-                Debug.Log("Teleporting");
+                //Debug.Log("Teleporting");
                 break;
 
             default:
                 Destroy(col.gameObject);
                 Debug.LogError("Collided with something not bomb or food");
                 break;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Pegs"))
+        { 
+            audioManager.GetComponent<SoundEffects>().PlaySound("Jump");
         }
     }
 }
