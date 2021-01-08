@@ -4,7 +4,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayVideo2 : MonoBehaviour
 {
-    [SerializeField] private VideoPlayer vp;
+    [SerializeField]
+    private VideoPlayer vp;
 
     // Start is called before the first frame update
     void Start()
