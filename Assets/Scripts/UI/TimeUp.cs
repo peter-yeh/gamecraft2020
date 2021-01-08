@@ -13,6 +13,9 @@ public class TimeUp : MonoBehaviour
     [SerializeField] private GameObject timeUpText;
     private WaitForSeconds wait = new WaitForSeconds(0.3f);
 
+    [SerializeField] private Button backButton;
+    [SerializeField] private Button continueButton;
+
     private void Start()
     {
         int level = Storage.GetStorage().GetCurrentLevel();
@@ -45,6 +48,8 @@ public class TimeUp : MonoBehaviour
             if (i == 9)
             {
                 Storage.GetStorage().SetLevelUnlocked(5);
+                backButton.gameObject.SetActive(false);
+                continueButton.gameObject.SetActive(true);
             }
 
             int j = 0;
@@ -80,6 +85,12 @@ public class TimeUp : MonoBehaviour
     public void QuitGame()
     {
         SceneManager.LoadScene(2);
+        Time.timeScale = 1f;
+    }
+
+    public void GoToVictory()
+    {
+        SceneManager.LoadScene(9);
         Time.timeScale = 1f;
     }
 
