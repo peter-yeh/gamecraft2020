@@ -287,6 +287,21 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1177087836}
+    - target: {fileID: 2039688475339828813, guid: 4acd54fd15d3f9a4fb40c98945af541d,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2039688475339828813, guid: 4acd54fd15d3f9a4fb40c98945af541d,
+        type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 2039688475339828813, guid: 4acd54fd15d3f9a4fb40c98945af541d,
+        type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 2039688475339828815, guid: 4acd54fd15d3f9a4fb40c98945af541d,
         type: 3}
       propertyPath: m_Pivot.x
