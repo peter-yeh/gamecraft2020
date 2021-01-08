@@ -155,12 +155,12 @@ public class playerMovement : MonoBehaviour
                 health--;
                 GameObject explosion = Instantiate(bombExplosion, transform.position, transform.rotation);
                 Destroy(explosion, 2f); // 2s delay before destroying clone
-                if (health <= 0)
+                /*if (health <= 0)
                 {
                     // Game over
                     audioManager.GetComponent<SoundEffects>().PlaySound("GameOver");
                     //Debug.Log("Health less than or equals to 0");
-                }
+                }*/
                 playerHealth.decreaseHealth();
                 //Debug.Log("Collision with bomb \n Health left: " + health);
                 break;
