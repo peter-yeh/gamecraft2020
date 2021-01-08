@@ -67,7 +67,7 @@ public class UnlockLevels : MonoBehaviour
 
     private void InitialiseFoods()
     {
-        for (int i = 0; i < 9; i++)
+        for (int i = 0; i < 10; i++)
         {
             if (Storage.GetStorage().getRecipeUnlocked(i))
             {
