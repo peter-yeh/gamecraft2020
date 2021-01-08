@@ -74,4 +74,14 @@ public class Storage
     {
         PlayerPrefs.SetInt("TotalRecipes", 1);
     }
+
+    public bool hasVideoPlayed()
+    {
+        return PlayerPrefs.GetInt("VideoPlayed", 0) == 1;
+    }
+
+    public void setVideoPlayed()
+    {
+        PlayerPrefs.SetInt("VideoPlayed", 1);
+    }
 }

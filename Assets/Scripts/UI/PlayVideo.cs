@@ -13,7 +13,8 @@ public class PlayVideo : MonoBehaviour
     {
         if (!vp.isPlaying)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            Storage.GetStorage().setVideoPlayed();
+            SceneManager.LoadScene(3);
         }
 
     }

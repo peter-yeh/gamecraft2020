@@ -22,7 +22,13 @@ public class LevelSelect : MonoBehaviour
         switch (levelID)
         {
             case 1:
-                level1.SetActive(true);
+                if (Storage.GetStorage().hasVideoPlayed())
+                {
+                    level1.SetActive(true);
+                } else
+                {
+                    SceneManager.LoadScene(1);
+                }
                 break;
             case 2:
                 level2.SetActive(true);
