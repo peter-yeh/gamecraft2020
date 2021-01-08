@@ -93,22 +93,22 @@ public class TimeUp : MonoBehaviour
 
         for (int i = 0; i < 5; i++)
         {
+            foreach (GameObject go in gos)
+            {
+                go.GetComponent<Image>().color = Color.grey;
+            }
+  
+            yield return wait;
+            
             foreach (GameObject go in gos) // this is to ensure they get lit up in sync
             {
                 go.GetComponent<Image>().color = Color.white;
             }
 
             yield return wait;
-            foreach (GameObject go in gos)
-            {
-                go.GetComponent<Image>().color = Color.grey;
-            }
-            yield return wait;
         }
 
-        go.GetComponent<Image>().color = Color.white;
-
-        //Debug.Log("Reduced colour of food:" + go.GetComponent<Image>());
+        //Debug.Log("Done flashing colour of food:" + go.GetComponent<Image>());
     }
 
 
