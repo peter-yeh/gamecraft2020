@@ -106,6 +106,8 @@ public class TimeUp : MonoBehaviour
             yield return wait;
         }
 
+        go.GetComponent<Image>().color = Color.white;
+
         //Debug.Log("Reduced colour of food:" + go.GetComponent<Image>());
     }
 
