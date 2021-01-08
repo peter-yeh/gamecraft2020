@@ -69,11 +69,11 @@ public class LevelUnlocked
         {
             if (ingredientsBasket[2] >= multiple && // milk
                 ingredientsBasket[3] >= multiple && // ice
-                ingredientsBasket[4] >= multiple) // strawberry
+                ingredientsBasket[4] >= 5) // strawberry
             {
                 ingredientsBasket[2] -= multiple;
                 ingredientsBasket[3] -= multiple;
-                ingredientsBasket[4] -= multiple;
+                ingredientsBasket[4] -= 5;
                 s.SetReceipeUnlocked(2); // unlocked strawberry smoothie
                 s.AddBlobCount();
                 l.Add(2);
@@ -128,12 +128,12 @@ public class LevelUnlocked
             if (ingredientsBasket[0] >= multiple && // rice
                 ingredientsBasket[1] >= multiple && // seaweed
                 ingredientsBasket[3] >= multiple && // salmon
-                ingredientsBasket[4] >= multiple) // avocado
+                ingredientsBasket[4] >= 5) // avocado
             {
                 ingredientsBasket[0] -= multiple;
                 ingredientsBasket[1] -= multiple;
                 ingredientsBasket[3] -= multiple;
-                ingredientsBasket[4] -= multiple;
+                ingredientsBasket[4] -= 5;
                 s.SetReceipeUnlocked(5); // unlocked california roll
                 s.AddBlobCount();
                 l.Add(5);
@@ -156,13 +156,13 @@ public class LevelUnlocked
              ingredientsBasket[1] >= multiple && // Lettuce
              ingredientsBasket[2] >= multiple && // Meat
              ingredientsBasket[3] >= multiple && // Ketchup
-             ingredientsBasket[4] >= multiple) //  Cheese
+             ingredientsBasket[4] >= 5) //  Cheese
             {
                 ingredientsBasket[0] -= multiple;
                 ingredientsBasket[1] -= multiple;
                 ingredientsBasket[2] -= multiple;
                 ingredientsBasket[3] -= multiple;
-                ingredientsBasket[4] -= multiple;
+                ingredientsBasket[4] -= 5;
 
                 s.SetReceipeUnlocked(6); // unlocked burger
                 s.AddBlobCount();
@@ -193,12 +193,12 @@ public class LevelUnlocked
             if (ingredientsBasket[0] >= multiple && // bun
                 ingredientsBasket[1] >= multiple && // lettuce
                 ingredientsBasket[3] >= multiple && // ketchup
-                ingredientsBasket[4] >= multiple) // cheese
+                ingredientsBasket[4] >= 5) // cheese
             {
                 ingredientsBasket[0] -= multiple;
                 ingredientsBasket[1] -= multiple;
                 ingredientsBasket[3] -= multiple;
-                ingredientsBasket[4] -= multiple;
+                ingredientsBasket[4] -= 5;
                 s.SetReceipeUnlocked(8); // unlocked sandwich
                 s.AddBlobCount();
                 l.Add(8);
