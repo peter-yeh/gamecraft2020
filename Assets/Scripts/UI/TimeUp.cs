@@ -41,29 +41,28 @@ public class TimeUp : MonoBehaviour
             if (i >= 6 && i < 9)
             {
                 Storage.GetStorage().SetLevelUnlocked(4);
-                int j = 0;
-                while (j < 9)
-                {
-                    if (Storage.GetStorage().getRecipeUnlocked(j))
-                    {
-                        j++;
-                        print("recipes unlocked:" + j);
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-                if (j == 9)
-                {
-                    Storage.GetStorage().setCompleted9Recipes();
-                }
             }
             if (i == 9)
             {
                 Storage.GetStorage().SetLevelUnlocked(5);
             }
 
+            int j = 0;
+            while (j < 9)
+            {
+                if (Storage.GetStorage().getRecipeUnlocked(j))
+                {
+                    j++;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            if (j == 9)
+            {
+                Storage.GetStorage().setCompleted9Recipes();
+            }
         }
 
         if (recipeUnlocked.Count == 0)
