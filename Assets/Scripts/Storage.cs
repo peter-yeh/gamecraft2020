@@ -27,9 +27,10 @@ public class Storage
         PlayerPrefs.SetInt("BlobCount", c);
     }
 
-    public void AddBlobCount(int add)
+    public void AddBlobCount()
     {
         int originalCount = getBlobCount();
+        int add = Random.Range(1000, 10000) * 10;
         PlayerPrefs.SetInt("BlobCount", originalCount + add);
     }
 

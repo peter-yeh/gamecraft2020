@@ -43,7 +43,7 @@ public class LevelUnlocked
                 ingredientsBasket[3]--;
                 s.SetReceipeUnlocked(0); // unlocked orange juice
                 l.Add(0);
-                s.AddBlobCount(9999);
+                s.AddBlobCount();
             }
             else
             { // do nothing since not enough ingredients
@@ -58,7 +58,7 @@ public class LevelUnlocked
                 ingredientsBasket[1]--;
                 ingredientsBasket[2]--;
                 s.SetReceipeUnlocked(1); // unlocked hot chocolate
-                s.AddBlobCount(9999);
+                s.AddBlobCount();
                 l.Add(1);
             }
         }
@@ -73,7 +73,7 @@ public class LevelUnlocked
                 ingredientsBasket[3]--;
                 ingredientsBasket[4]--;
                 s.SetReceipeUnlocked(2); // unlocked strawberry smoothie
-                s.AddBlobCount(9999);
+                s.AddBlobCount();
                 l.Add(2);
             }
         }
@@ -98,7 +98,7 @@ public class LevelUnlocked
                 ingredientsBasket[1]--;
                 ingredientsBasket[2]--;
                 s.SetReceipeUnlocked(3); // unlocked cucumber maki
-                s.AddBlobCount(9999);
+                s.AddBlobCount();
                 l.Add(3);
             }
             else
@@ -116,7 +116,7 @@ public class LevelUnlocked
                 ingredientsBasket[1]--;
                 ingredientsBasket[3]--;
                 s.SetReceipeUnlocked(4); // unlocked salmon gunkan
-                s.AddBlobCount(9999);
+                s.AddBlobCount();
                 l.Add(4);
             }
         }
@@ -133,7 +133,7 @@ public class LevelUnlocked
                 ingredientsBasket[3]--;
                 ingredientsBasket[4]--;
                 s.SetReceipeUnlocked(5); // unlocked california roll
-                s.AddBlobCount(9999);
+                s.AddBlobCount();
                 l.Add(5);
             }
         }
@@ -163,7 +163,7 @@ public class LevelUnlocked
                 ingredientsBasket[4]--;
 
                 s.SetReceipeUnlocked(6); // unlocked burger
-                s.AddBlobCount(9999);
+                s.AddBlobCount();
                 l.Add(6);
             }
             else
@@ -181,7 +181,7 @@ public class LevelUnlocked
                 ingredientsBasket[2]--;
                 ingredientsBasket[3]--;
                 s.SetReceipeUnlocked(7); // unlocked hotdog
-                s.AddBlobCount(9999);
+                s.AddBlobCount();
                 l.Add(7);
             }
         }
@@ -198,7 +198,7 @@ public class LevelUnlocked
                 ingredientsBasket[3]--;
                 ingredientsBasket[4]--;
                 s.SetReceipeUnlocked(8); // unlocked sandwich
-                s.AddBlobCount(9999);
+                s.AddBlobCount();
                 l.Add(8);
             }
         }
@@ -228,7 +228,7 @@ public class LevelUnlocked
                 ingredientsBasket[4]--;
 
                 s.SetReceipeUnlocked(9); // unlocked cake
-                s.AddBlobCount(9999);
+                s.AddBlobCount();
                 l.Add(9);
             }
             else
