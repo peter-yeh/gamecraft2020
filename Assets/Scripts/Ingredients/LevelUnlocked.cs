@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class LevelUnlocked
 {
 
-    private int multiple = 3;
+    private int multiple = 2;
 
     private LevelUnlocked() { }
 
@@ -38,11 +38,11 @@ public class LevelUnlocked
         if (!s.getRecipeUnlocked(0)) // if orange juice is not unlocked
         {
             // checks if there's enogh ingredients to unlock orange juice
-            if (ingredientsBasket[0] >= multiple && // orange
-             ingredientsBasket[3] >= multiple) // ice
+            if (ingredientsBasket[0] >= 3 && // orange
+             ingredientsBasket[3] >= 3) // ice
             {
-                ingredientsBasket[0] -= multiple;
-                ingredientsBasket[3] -= multiple;
+                ingredientsBasket[0] -= 3;
+                ingredientsBasket[3] -= 3;
                 s.SetReceipeUnlocked(0); // unlocked orange juice
                 l.Add(0);
                 s.AddBlobCount();
@@ -54,11 +54,11 @@ public class LevelUnlocked
 
         if (!s.getRecipeUnlocked(1))
         {
-            if (ingredientsBasket[1] >= multiple && // chocolate
-                ingredientsBasket[2] >= multiple) // milk
+            if (ingredientsBasket[1] >= 3 && // chocolate
+                ingredientsBasket[2] >= 3) // milk
             {
-                ingredientsBasket[1] -= multiple;
-                ingredientsBasket[2] -= multiple;
+                ingredientsBasket[1] -= 3;
+                ingredientsBasket[2] -= 3;
                 s.SetReceipeUnlocked(1); // unlocked hot chocolate
                 s.AddBlobCount();
                 l.Add(1);
@@ -67,12 +67,12 @@ public class LevelUnlocked
 
         if (!s.getRecipeUnlocked(2))
         {
-            if (ingredientsBasket[2] >= multiple && // milk
-                ingredientsBasket[3] >= multiple && // ice
+            if (ingredientsBasket[2] >= 3 && // milk
+                ingredientsBasket[3] >= 3 && // ice
                 ingredientsBasket[4] >= 5) // strawberry
             {
-                ingredientsBasket[2] -= multiple;
-                ingredientsBasket[3] -= multiple;
+                ingredientsBasket[2] -= 3;
+                ingredientsBasket[3] -= 3;
                 ingredientsBasket[4] -= 5;
                 s.SetReceipeUnlocked(2); // unlocked strawberry smoothie
                 s.AddBlobCount();
