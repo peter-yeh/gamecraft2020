@@ -34,7 +34,6 @@ public class PauseMenu : MonoBehaviour
 
     public void RestartGame()
     {
-        PlayerPrefs.DeleteAll();
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
         Time.timeScale = 1f;
